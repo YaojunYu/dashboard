@@ -24,9 +24,9 @@ import (
 	"time"
 
 	restful "github.com/emicklei/go-restful"
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	kdErrors "github.com/kubernetes/dashboard/src/app/backend/errors"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
+	kdErrors "github.com/xcloudnative/xspace-console/src/app/backend/errors"
 	"golang.org/x/net/xsrftoken"
 	errorsK8s "k8s.io/apimachinery/pkg/api/errors"
 	utilnet "k8s.io/apimachinery/pkg/util/net"

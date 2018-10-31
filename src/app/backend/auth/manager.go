@@ -17,9 +17,9 @@ package auth
 import (
 	"errors"
 
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	kdErrors "github.com/kubernetes/dashboard/src/app/backend/errors"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
+	kdErrors "github.com/xcloudnative/xspace-console/src/app/backend/errors"
 	"k8s.io/client-go/tools/clientcmd/api"
 )
 

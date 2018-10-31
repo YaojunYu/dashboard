@@ -34,6 +34,6 @@ export class ActionbarComponent {
         `precisely as possible. -->\n\n##### Expected result\n<!-- Describe expected result as ` +
         `precisely as possible. -->\n\n##### Comments\n<!-- If you have any comments or more ` +
         `details, put them here. -->`;
-    return `https://github.com/kubernetes/dashboard/issues/new?body=${encodeURIComponent(body)}`;
+    return `https://github.com/xcloudnative/xspace-console/issues/new?body=${encodeURIComponent(body)}`;
   }
 }

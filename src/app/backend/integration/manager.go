@@ -17,9 +17,9 @@ package integration
 import (
 	"fmt"
 
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	"github.com/kubernetes/dashboard/src/app/backend/integration/api"
-	"github.com/kubernetes/dashboard/src/app/backend/integration/metric"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/integration/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/integration/metric"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

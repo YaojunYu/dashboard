@@ -74,7 +74,7 @@ export default {
    * the expression of recording version info into src/app/backend/client/manager.go
    */
   recordVersionExpression:
-      `-X github.com/kubernetes/dashboard/src/app/backend/client.Version=${version.release}`,
+      `-X github.com/xcloudnative/xspace-console/src/app/backend/client.Version=${version.release}`,
 
   /**
    * Configuration for container registry to push images to.
@@ -92,14 +92,14 @@ export default {
     /**
      * Name of the main backend package that is used in go build command.
      */
-    mainPackageName: 'github.com/kubernetes/dashboard/src/app/backend',
+    mainPackageName: 'github.com/xcloudnative/xspace-console/src/app/backend',
     /**
      * Names of all backend packages prefixed with 'test' command.
      */
     testCommandArgs:
         [
           'test',
-          'github.com/kubernetes/dashboard/src/app/backend/...',
+          'github.com/xcloudnative/xspace-console/src/app/backend/...',
         ],
     /**
      * Insecure port number of the backend server. Only used during development.
@@ -235,9 +235,9 @@ export default {
     backendSrc: path.join(basePath, 'src/app/backend'),
     backendTmp: path.join(basePath, '.tmp/backend'),
     backendTmpSrc: path.join(
-        basePath, '.tmp/backend/src/github.com/kubernetes/dashboard/src/app/backend'),
+        basePath, '.tmp/backend/src/github.com/xcloudnative/xspace-console/src/app/backend'),
     backendTmpSrcVendor: path.join(
-        basePath, '.tmp/backend/src/github.com/kubernetes/dashboard/vendor'),
+        basePath, '.tmp/backend/src/github.com/xcloudnative/xspace-console/vendor'),
     backendVendor: path.join(basePath, 'vendor'),
     deploySrc: path.join(basePath, 'aio'),
     dist: path.join(basePath, 'dist', arch.default),

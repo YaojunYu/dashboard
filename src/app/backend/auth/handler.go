@@ -18,8 +18,8 @@ import (
 	"net/http"
 
 	restful "github.com/emicklei/go-restful"
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	"github.com/kubernetes/dashboard/src/app/backend/validation"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/validation"
 )
 
 // AuthHandler manages all endpoints related to dashboard auth, such as login.

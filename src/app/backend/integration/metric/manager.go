@@ -19,10 +19,10 @@ import (
 	"log"
 	"time"
 
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	integrationapi "github.com/kubernetes/dashboard/src/app/backend/integration/api"
-	metricapi "github.com/kubernetes/dashboard/src/app/backend/integration/metric/api"
-	"github.com/kubernetes/dashboard/src/app/backend/integration/metric/heapster"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
+	integrationapi "github.com/xcloudnative/xspace-console/src/app/backend/integration/api"
+	metricapi "github.com/xcloudnative/xspace-console/src/app/backend/integration/metric/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/integration/metric/heapster"
 	"k8s.io/apimachinery/pkg/util/wait"
 )
 

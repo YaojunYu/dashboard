@@ -19,8 +19,8 @@ import (
 	"log"
 	"reflect"
 
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
-	"github.com/kubernetes/dashboard/src/app/backend/settings/api"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/settings/api"
 	"k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"

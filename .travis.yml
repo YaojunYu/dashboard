@@ -14,9 +14,9 @@ cache:
 
 before_install:
   - export GOPATH=$TRAVIS_BUILD_DIR/.tmp
-  - mkdir -p $TRAVIS_BUILD_DIR/.tmp/src/github.com/kubernetes/dashboard/src/app
-  - cp -r $TRAVIS_BUILD_DIR/src/app/backend $TRAVIS_BUILD_DIR/.tmp/src/github.com/kubernetes/dashboard/src/app
-  - ln -s $TRAVIS_BUILD_DIR/vendor $TRAVIS_BUILD_DIR/.tmp/src/github.com/kubernetes/dashboard/src/app/backend/vendor
+  - mkdir -p $TRAVIS_BUILD_DIR/.tmp/src/github.com/xcloudnative/xspace-console/src/app
+  - cp -r $TRAVIS_BUILD_DIR/src/app/backend $TRAVIS_BUILD_DIR/.tmp/src/github.com/xcloudnative/xspace-console/src/app
+  - ln -s $TRAVIS_BUILD_DIR/vendor $TRAVIS_BUILD_DIR/.tmp/src/github.com/xcloudnative/xspace-console/src/app/backend/vendor
 
 before_script:
   - eval "$(gimme 1.11.1)"

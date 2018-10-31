@@ -21,9 +21,9 @@ import (
 	"strings"
 
 	restful "github.com/emicklei/go-restful"
-	"github.com/kubernetes/dashboard/src/app/backend/args"
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/args"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
 	"k8s.io/api/authorization/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"

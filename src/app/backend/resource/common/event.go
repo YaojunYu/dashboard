@@ -15,7 +15,7 @@
 package common
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/api"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

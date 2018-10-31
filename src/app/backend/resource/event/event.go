@@ -17,7 +17,7 @@ package event
 import (
 	"strings"
 
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/common"
 	api "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 )

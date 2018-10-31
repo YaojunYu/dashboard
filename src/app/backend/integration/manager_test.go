@@ -18,11 +18,11 @@ import (
 	"errors"
 	"testing"
 
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	"github.com/kubernetes/dashboard/src/app/backend/auth/jwe"
-	"github.com/kubernetes/dashboard/src/app/backend/client"
-	"github.com/kubernetes/dashboard/src/app/backend/integration/api"
-	"github.com/kubernetes/dashboard/src/app/backend/sync"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/auth/jwe"
+	"github.com/xcloudnative/xspace-console/src/app/backend/client"
+	"github.com/xcloudnative/xspace-console/src/app/backend/integration/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/sync"
 	"k8s.io/client-go/kubernetes/fake"
 )
 

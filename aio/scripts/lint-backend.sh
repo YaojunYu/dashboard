@@ -43,7 +43,7 @@ function run-gofmt {
 
 function run-go-vet {
   say "\nRunning go vet check"
-  go vet github.com/kubernetes/dashboard/src/app/backend/...
+  go vet github.com/xcloudnative/xspace-console/src/app/backend/...
   echo "OK!"
 }
 
@@ -55,7 +55,7 @@ function run-gocyclo {
 
 function run-golint {
   say "\nRunning golint check"
-  golint -set_exit_status github.com/kubernetes/dashboard/src/app/backend/...
+  golint -set_exit_status github.com/xcloudnative/xspace-console/src/app/backend/...
   echo "OK!"
 }
 

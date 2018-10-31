@@ -15,9 +15,9 @@
 package storageclass
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/persistentvolume"
+	"github.com/xcloudnative/xspace-console/src/app/backend/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/dataselect"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/persistentvolume"
 	storage "k8s.io/api/storage/v1"
 )
 

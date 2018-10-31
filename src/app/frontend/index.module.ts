@@ -28,6 +28,7 @@ import {RootComponent} from './index.component';
 import {configureRouter} from './index.router.config';
 import {LoginModule} from './login/module';
 import {loginState} from './login/state';
+import {LogsModule} from './logs/module';
 import {overviewFutureState, overviewState} from './overview/state';
 import {clusterRoleFutureState} from './resource/cluster/clusterrole/state';
 import {namespaceFutureState} from './resource/cluster/namespace/state';
@@ -54,7 +55,6 @@ import {statefulSetFutureState} from './resource/workloads/statefulset/state';
 import {searchFutureState} from './search/state';
 import {settingsFutureState} from './settings/state';
 import {shellFutureState} from './shell/state';
-import {LogsModule} from "./logs/module";
 
 @NgModule({
   imports: [

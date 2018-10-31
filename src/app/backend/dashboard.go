@@ -25,6 +25,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/spf13/pflag"
 	"github.com/xcloudnative/xspace-console/src/app/backend/args"
 	"github.com/xcloudnative/xspace-console/src/app/backend/auth"
 	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
@@ -39,8 +41,6 @@ import (
 	"github.com/xcloudnative/xspace-console/src/app/backend/settings"
 	"github.com/xcloudnative/xspace-console/src/app/backend/sync"
 	"github.com/xcloudnative/xspace-console/src/app/backend/systembanner"
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/spf13/pflag"
 )
 
 var (
@@ -233,5 +233,5 @@ func handleFatalInitError(err error) {
 		"invalid apiserver certificates or service account's configuration) or the "+
 		"--apiserver-host param points to a server that does not exist. Reason: %s\n"+
 		"Refer to our FAQ and wiki pages for more information: "+
-		"https://github.com/xcloudnative/xspace-console/wiki/FAQ", err)
+		"https://github.com/kubernetes/dashboard/wiki/FAQ", err)
 }

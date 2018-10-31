@@ -4,7 +4,7 @@
   "version": "1.10.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kubernetes/dashboard.git"
+    "url": "https://github.com/xcloudnative/xspace-console.git"
   },
   "license": "Apache-2.0",
   "//-2-//": "Do not change ordering of 'dependencies' section. It is important to keep it this way.",

@@ -17,7 +17,7 @@ package jwe
 import (
 	"testing"
 
-	"github.com/kubernetes/dashboard/src/app/backend/sync"
+	"github.com/xcloudnative/xspace-console/src/app/backend/sync"
 	"k8s.io/client-go/kubernetes/fake"
 )
 

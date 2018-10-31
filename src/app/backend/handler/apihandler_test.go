@@ -24,14 +24,14 @@ import (
 	"strings"
 
 	restful "github.com/emicklei/go-restful"
-	"github.com/kubernetes/dashboard/src/app/backend/args"
-	"github.com/kubernetes/dashboard/src/app/backend/auth"
-	authApi "github.com/kubernetes/dashboard/src/app/backend/auth/api"
-	"github.com/kubernetes/dashboard/src/app/backend/auth/jwe"
-	"github.com/kubernetes/dashboard/src/app/backend/client"
-	"github.com/kubernetes/dashboard/src/app/backend/settings"
-	"github.com/kubernetes/dashboard/src/app/backend/sync"
-	"github.com/kubernetes/dashboard/src/app/backend/systembanner"
+	"github.com/xcloudnative/xspace-console/src/app/backend/args"
+	"github.com/xcloudnative/xspace-console/src/app/backend/auth"
+	authApi "github.com/xcloudnative/xspace-console/src/app/backend/auth/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/auth/jwe"
+	"github.com/xcloudnative/xspace-console/src/app/backend/client"
+	"github.com/xcloudnative/xspace-console/src/app/backend/settings"
+	"github.com/xcloudnative/xspace-console/src/app/backend/sync"
+	"github.com/xcloudnative/xspace-console/src/app/backend/systembanner"
 	"k8s.io/client-go/kubernetes/fake"
 )
 

@@ -17,8 +17,8 @@ package client
 import (
 	"fmt"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	clientapi "github.com/kubernetes/dashboard/src/app/backend/client/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/api"
+	clientapi "github.com/xcloudnative/xspace-console/src/app/backend/client/api"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	restclient "k8s.io/client-go/rest"

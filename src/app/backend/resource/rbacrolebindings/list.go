@@ -17,9 +17,9 @@ package rbacrolebindings
 import (
 	"log"
 
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
+	"github.com/xcloudnative/xspace-console/src/app/backend/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/common"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/dataselect"
 	rbac "k8s.io/api/rbac/v1"
 	"k8s.io/client-go/kubernetes"
 )

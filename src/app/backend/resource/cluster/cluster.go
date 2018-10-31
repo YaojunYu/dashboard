@@ -17,15 +17,15 @@ package cluster
 import (
 	"log"
 
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
-	metricapi "github.com/kubernetes/dashboard/src/app/backend/integration/metric/api"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/namespace"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/node"
-	pv "github.com/kubernetes/dashboard/src/app/backend/resource/persistentvolume"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/rbacroles"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/storageclass"
+	"github.com/xcloudnative/xspace-console/src/app/backend/errors"
+	metricapi "github.com/xcloudnative/xspace-console/src/app/backend/integration/metric/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/common"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/dataselect"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/namespace"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/node"
+	pv "github.com/xcloudnative/xspace-console/src/app/backend/resource/persistentvolume"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/rbacroles"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/storageclass"
 	"k8s.io/client-go/kubernetes"
 )
 

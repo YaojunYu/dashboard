@@ -15,11 +15,11 @@
 package deployment
 
 import (
-	"github.com/kubernetes/dashboard/src/app/backend/api"
-	"github.com/kubernetes/dashboard/src/app/backend/errors"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/common"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/dataselect"
-	"github.com/kubernetes/dashboard/src/app/backend/resource/replicaset"
+	"github.com/xcloudnative/xspace-console/src/app/backend/api"
+	"github.com/xcloudnative/xspace-console/src/app/backend/errors"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/common"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/dataselect"
+	"github.com/xcloudnative/xspace-console/src/app/backend/resource/replicaset"
 	apps "k8s.io/api/apps/v1beta2"
 	metaV1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	client "k8s.io/client-go/kubernetes"

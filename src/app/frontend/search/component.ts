@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component} from '@angular/core';
 import {ListGroupIdentifiers} from '../common/components/resourcelist/groupids';
 import {GroupedResourceList} from '../common/resources/groupedlist';
 
-@Component({selector: 'kd-search', templateUrl: './template.html'})
+@Component({selector: 'xc-search', templateUrl: './template.html'})
 export class SearchComponent extends GroupedResourceList {
   hasCluster(): boolean {
     return this.isGroupVisible(ListGroupIdentifiers.cluster);

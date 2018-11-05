@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'kd-pod-list-state',
-  template: '<kd-pod-list></kd-pod-list>',
+  selector: 'xc-pod-list-state',
+  template: '<xc-pod-list></xc-pod-list>',
 })
 export class PodList {}

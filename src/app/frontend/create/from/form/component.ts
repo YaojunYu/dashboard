@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +35,7 @@ import {FormValidators} from './validator/validators';
 const APP_LABEL_KEY = 'k8s-app';
 
 @Component(
-    {selector: 'kd-create-from-form', templateUrl: './template.html', styleUrls: ['./style.scss']})
+    {selector: 'xc-create-from-form', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class CreateFromFormComponent implements OnInit {
   readonly nameMaxLength = 24;
 

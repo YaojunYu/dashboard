@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,9 +29,9 @@ import {AbstractControl, NG_VALIDATORS, Validator} from '@angular/forms';
  *
  * Usage:
  *    <md-input-container>
- *      <input type="number" name="maxInput" kd-warn-threshold="100"
- *             kd-warn-threshold-bind="showWarning">
- *      <span class="kd-warn-threshold" ng-show="showWarning">Warning message</span>
+ *      <input type="number" name="maxInput" xc-warn-threshold="100"
+ *             xc-warn-threshold-bind="showWarning">
+ *      <span class="xc-warn-threshold" ng-show="showWarning">Warning message</span>
  *    </md-input-container>
  *
  */

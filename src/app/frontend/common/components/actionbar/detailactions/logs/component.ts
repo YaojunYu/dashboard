@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +21,7 @@ import {LogsStateParams} from '../../../../params/params';
 import {ResourceMeta} from '../../../../services/global/actionbar';
 
 @Component({
-  selector: 'kd-actionbar-detail-logs',
+  selector: 'xc-actionbar-detail-logs',
   templateUrl: './template.html',
 })
 export class ActionbarDetailLogsComponent {

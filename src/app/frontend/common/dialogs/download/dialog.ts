@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ export interface LogsDownloadDialogMeta {
 }
 
 @Component({
-  selector: 'kd-logs-download-dialog',
+  selector: 'xc-logs-download-dialog',
   templateUrl: 'template.html',
   styleUrls: ['style.scss'],
 })

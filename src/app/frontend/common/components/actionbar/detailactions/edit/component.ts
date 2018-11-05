@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +22,7 @@ import {overviewState} from '../../../../../overview/state';
 import {VerberService} from '../../../../services/global/verber';
 
 @Component({
-  selector: 'kd-actionbar-detail-edit',
+  selector: 'xc-actionbar-detail-edit',
   templateUrl: './template.html',
 })
 export class ActionbarDetailEditComponent {

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,19 +19,19 @@
   display: block;
   padding: 0 $baseline-grid 0 (3 * $baseline-grid);
 
-  .kd-namespace-select-title {
+  .xc-namespace-select-title {
     font-family: $font-family-sans;
     font-size: $caption-font-size-base;
   }
 }
 
-.kd-namespace-select-input-container {
+.xc-namespace-select-input-container {
   font-weight: $bold-font-weight;
   margin-right: $baseline-grid;
   width: 100%;
 }
 
-.kd-namespace-select-input {
+.xc-namespace-select-input {
   border: 0;
   height: 3 * $baseline-grid;
   outline: none;

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +21,7 @@ import {logsState} from '../../../../../logs/state';
 import {LogsStateParams} from '../../../../params/params';
 
 @Component({
-  selector: 'kd-logs-button',
+  selector: 'xc-logs-button',
   templateUrl: './template.html',
 })
 export class LogsButtonComponent implements ActionColumn {

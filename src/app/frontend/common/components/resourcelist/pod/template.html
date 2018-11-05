@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +15,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card role="table"
+<xc-card role="table"
          [hidden]="isHidden()">
   <div title
        fxLayout="row">Pods</div>
   <div description>
-    <span class="kd-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
+    <span class="xc-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
   <div actions>
-    <kd-card-list-filter></kd-card-list-filter>
+    <xc-card-list-filter></xc-card-list-filter>
   </div>
 
   <div content
@@ -70,7 +71,7 @@ limitations under the License.
       <ng-container matColumnDef="labels">
         <mat-header-cell *matHeaderCellDef>Labels</mat-header-cell>
         <mat-cell *matCellDef="let pod">
-          <kd-chips [map]="pod.objectMeta.labels"></kd-chips>
+          <xc-chips [map]="pod.objectMeta.labels"></xc-chips>
         </mat-cell>
       </ng-container>
 
@@ -108,8 +109,8 @@ limitations under the License.
                     [matColumnDef]="col.name">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let pod">
-          <kd-dynamic-cell [component]="col.component"
-                           [resource]="pod"></kd-dynamic-cell>
+          <xc-dynamic-cell [component]="col.component"
+                           [resource]="pod"></xc-dynamic-cell>
         </mat-cell>
       </ng-container>
 
@@ -118,7 +119,7 @@ limitations under the License.
                (mouseover)="onRowOver(index)"
                (mouseleave)="onRowLeave()"
                (click)="expand(index, row)"
-               [ngClass]="{'kd-no-bottom-border': isRowExpanded(index), 'kd-clickable': hasErrors(row)}"
+               [ngClass]="{'xc-no-bottom-border': isRowExpanded(index), 'xc-clickable': hasErrors(row)}"
                *matRowDef="let row; columns: getColumns(); let index=index"></mat-row>
     </mat-table>
 
@@ -130,6 +131,6 @@ limitations under the License.
 
   <div content
        [hidden]="!showZeroState()">
-    <kd-list-zero-state></kd-list-zero-state>
+    <xc-list-zero-state></xc-list-zero-state>
   </div>
-</kd-card>
+</xc-card>

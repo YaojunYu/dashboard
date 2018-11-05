@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -59,7 +60,7 @@ describe('AboutComponent', () => {
     component.latestCopyrightYear = copyrightYear;
 
     // grab the HTML element
-    element = fixture.debugElement.query(By.css('kd-card')).nativeElement;
+    element = fixture.debugElement.query(By.css('xc-card')).nativeElement;
   }));
 
   it('should print current year', async(() => {

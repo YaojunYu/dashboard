@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +19,7 @@ import {stateName as configMapState} from '../../../resource/config/configmap/st
 import {stateName as secretState} from '../../../resource/config/secret/state';
 
 @Component({
-  selector: 'kd-container-card',
+  selector: 'xc-container-card',
   templateUrl: './template.html',
   styleUrls: ['style.scss'],
 })

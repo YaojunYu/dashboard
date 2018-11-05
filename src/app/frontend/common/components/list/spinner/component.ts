@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,8 +19,8 @@ import {Component, Input, OnInit} from '@angular/core';
   selector: '[kdLoadingSpinner]',
   templateUrl: './template.html',
   host: {
-    // kd-loading-share class is defined globally in index.scss file.
-    '[class.kd-loading-shade]': 'isLoading',
+    // xc-loading-share class is defined globally in index.scss file.
+    '[class.xc-loading-shade]': 'isLoading',
   }
 })
 export class LoadingSpinner implements OnInit {

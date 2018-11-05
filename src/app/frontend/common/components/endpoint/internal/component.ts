@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,5 +21,5 @@ import {Endpoint} from '@api/backendapi';
  * only from the inside of the cluster.
  */
 @Component(
-    {selector: 'kd-internal-endpoint', templateUrl: './template.html', styleUrls: ['./style.scss']})
+    {selector: 'xc-internal-endpoint', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class InternalEndpointComponent { @Input() endpoints: Endpoint[]; }

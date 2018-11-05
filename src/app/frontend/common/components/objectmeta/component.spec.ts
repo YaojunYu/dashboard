@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -90,7 +91,7 @@ describe('ObjectMetaComponent', () => {
     expect(card).toBeTruthy();
 
     const metaName =
-        fixture.debugElement.query(By.css('kd-property.object-meta-name div.kd-property-value'));
+        fixture.debugElement.query(By.css('xc-property.object-meta-name div.xc-property-value'));
     expect(metaName).toBeTruthy();
     expect(metaName.nativeElement.textContent === miniName);
   });

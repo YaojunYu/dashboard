@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,77 +15,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div fxLayout="column"
-     fxFill
-     fxFlexFill>
-  <mat-toolbar class="kd-toolbar kd-primary-toolbar">
-    <div class="kd-toolbar-tools"
-         fxLayout="row"
-         fxFlex="auto">
-      <div class="kd-logo-bar">
-        <a uiSref="{{getOverviewStateName()}}"
-           class="kd-toolbar-logo-link">
-          <mat-icon [svgIcon]="assets.getAppLogo()"
-                    class="kd-toolbar-logo">
-          </mat-icon>
-          <mat-icon [svgIcon]="assets.getAppLogoText()"
-                    class="kd-toolbar-logo-text">
-          </mat-icon>
-        </a>
-      </div>
-      <kd-search class="kd-search-bar"
-                 fxFlex>
-      </kd-search>
-      <div fxLayout="row">
-        <button mat-icon-button
-                color="primary"
-                class="kd-toolbar-action"
-                i18n-matTooltip
-                matTooltip="Create new resource"
-                (click)="goToCreateState()">
-          <mat-icon class="kd-primary-toolbar-icon">add</mat-icon>
-        </button>
-        <kd-notifications class="kd-toolbar-action"></kd-notifications>
-        <kd-user-panel class="kd-toolbar-action"></kd-user-panel>
+<div [ngSwitch]="loading"
+     fxLayoutAlign="center"
+     fxFlex
+     class="mat-app-background perfect-scrollbar-off perfect-scrollbar-on">
+  <div *ngSwitchCase="true"
+       fxFlexAlign="center">
+    <mat-spinner mode="indeterminate"
+                 [diameter]="48">
+    </mat-spinner>
+  </div>
+  <div *ngSwitchCase="false"
+       [ngClass]="{'sidebar-mini': sidebarMiniActive, 'nav-open': navOpen}"
+       fxFlex>
+    <div class="wrapper">
+      <xc-sidebar></xc-sidebar>
+      <div class="main-panel">
+        <xc-navbar></xc-navbar>
+        <div class="main-content"
+             fxLayout="column">
+          <ui-view fxFlex="auto"></ui-view>
+          <xc-footer fxFlex="none"></xc-footer>
+        </div>
       </div>
     </div>
-  </mat-toolbar>
 
-  <mat-toolbar class="kd-second-toolbar kd-bg-primary">
-    <div class="kd-toolbar-tools"
-         fxFlex>
-      <kd-nav-hamburger fxFlex="none"></kd-nav-hamburger>
-      <kd-breadcrumbs class="kd-actionbar-breadcrumbs"></kd-breadcrumbs>
-      <kd-actionbar fxFlex="end"></kd-actionbar>
-    </div>
-  </mat-toolbar>
-
-  <!-- TODO export to component -->
-  <mat-toolbar class="kd-system-banner"
-               [ngClass]="getSystemBannerClass()"
-               *ngIf="isSystemBannerVisible()"
-               [innerHTML]="getSystemBannerMessage()">
-  </mat-toolbar>
-
-  <div fxFlex
-       fxLayout="row"
-       class="kd-chrome-container kd-bg-background">
-    <kd-nav></kd-nav>
-    <div [ngSwitch]="loading"
-         fxLayoutAlign="center"
-         fxFlex
-         class="kd-scroll-container">
-      <div *ngSwitchCase="true"
-           fxFlexAlign="center">
-        <mat-spinner mode="indeterminate"
-                     [diameter]="48">
-        </mat-spinner>
-      </div>
-      <div *ngSwitchCase="false"
-           fxFlex
-           class="kd-scroll-container">
-        <ui-view></ui-view>
-      </div>
-    </div>
   </div>
 </div>

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,7 +41,7 @@ const i18n = {
       'The middle part of the log file cannot be loaded, because it is too big.'
 };
 
-@Component({selector: 'kd-logs', templateUrl: './template.html', styleUrls: ['./style.scss']})
+@Component({selector: 'xc-logs', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class LogsComponent implements OnDestroy {
   podLogs: LogDetails;
   logsSet: string[];

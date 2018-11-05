@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card [initialized]="isInitialized()"
+<xc-card [initialized]="isInitialized()"
          [expandable]="true"
          *ngIf="!hasLoadError">
   <div title
@@ -27,7 +28,7 @@ limitations under the License.
     <br>
     <form #form="ngForm"
           (ngSubmit)="save(form)">
-      <kd-settings-entry key="Cluster name"
+      <xc-settings-entry key="Cluster name"
                          desc="Cluster name appears in the browser window title if it is set">
         <mat-form-field fxFlex>
           <input [(ngModel)]="settings.clusterName"
@@ -36,8 +37,8 @@ limitations under the License.
                  type="text"
                  matInput>
         </mat-form-field>
-      </kd-settings-entry>
-      <kd-settings-entry key="Items per page"
+      </xc-settings-entry>
+      <xc-settings-entry key="Items per page"
                          desc="Max number of items that can be displayed on each list page">
         <div fxFlex>
           <mat-slider [(ngModel)]="settings.itemsPerPage"
@@ -48,13 +49,13 @@ limitations under the License.
                       step="5"
                       fxFlex>
           </mat-slider>
-          <div class="kd-slider-value kd-muted"
+          <div class="xc-slider-value xc-muted"
                fxFlexAlign=" center">
             {{settings.itemsPerPage}}
           </div>
         </div>
-      </kd-settings-entry>
-      <kd-settings-entry key="Auto-refresh time interval"
+      </xc-settings-entry>
+      <xc-settings-entry key="Auto-refresh time interval"
                          desc="Number of seconds between every auto-refresh of logs">
         <div fxFlex>
           <mat-slider [(ngModel)]="settings.autoRefreshTimeInterval"
@@ -65,12 +66,12 @@ limitations under the License.
                       step="1"
                       fxFlex>
           </mat-slider>
-          <span class="kd-slider-value kd-muted"
+          <span class="xc-slider-value xc-muted"
                 fxFlexAlign=" center">
           {{settings.autoRefreshTimeInterval}}
           </span>
         </div>
-      </kd-settings-entry>
+      </xc-settings-entry>
       <br><br>
       <button [disabled]="form.pristine"
               type="submit"
@@ -88,4 +89,4 @@ limitations under the License.
       </button>
     </form>
   </div>
-</kd-card>
+</xc-card>

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,24 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {MatDrawer} from '@angular/material';
+import {ChromeComponent} from '../../../chrome/component';
 
 export class NavService {
-  private nav_: MatDrawer;
+  private switcher_: ChromeComponent;
 
-  toggle(): void {
-    this.nav_.toggle();
+  setSwitcher(switcher: ChromeComponent): void {
+    this.switcher_ = switcher;
   }
 
-  setVisibility(isVisible: boolean): void {
-    this.nav_.toggle(isVisible);
+  switchMini(): void {
+    this.switcher_.switchMini();
   }
 
-  setNav(nav: MatDrawer): void {
-    this.nav_ = nav;
-  }
-
-  isVisible(): boolean {
-    return this.nav_.opened;
+  navOpen(): void {
+    this.switcher_.open();
   }
 }

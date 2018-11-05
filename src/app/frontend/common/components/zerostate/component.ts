@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,5 +15,5 @@
 
 import {Component} from '@angular/core';
 
-@Component({selector: 'kd-zero-state', templateUrl: './template.html', styleUrls: ['./style.scss']})
+@Component({selector: 'xc-zero-state', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class ZeroStateComponent {}

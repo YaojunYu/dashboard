@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +18,7 @@ import {MatTableDataSource} from '@angular/material';
 import {PolicyRule} from 'typings/backendapi';
 
 @Component({
-  selector: 'kd-comma-separated-list',
+  selector: 'xc-comma-separated-list',
   templateUrl: './template.html',
 })
 export class CommaSeparatedListComponent {

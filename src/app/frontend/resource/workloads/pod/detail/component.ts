@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +26,7 @@ import {NamespacedResourceService} from '../../../../common/services/resource/re
 import {nodeState} from '../../../cluster/node/state';
 
 @Component({
-  selector: 'kd-pod-detail',
+  selector: 'xc-pod-detail',
   templateUrl: './template.html',
 })
 export class PodDetailComponent implements OnInit, OnDestroy {

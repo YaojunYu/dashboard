@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,13 +25,13 @@ import {CardComponent} from './component';
   selector: 'test',
   template: `
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-       <kd-card [expanded]="isExpanded" [expandable]="isExpandable" role="table">
+       <xc-card [expanded]="isExpanded" [expandable]="isExpandable" role="table">
             <div title>{{ title }}</div>
             <div description>Description: default</div>
             <div actions>Actions: default</div>
             <div content>Content: default</div>
             <div footer>Footer: default</div>
-        </kd-card>`
+        </xc-card>`
 
 })
 class TestComponent {

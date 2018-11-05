@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,9 @@ limitations under the License.
 -->
 
 <!-- TODO(maciaszczykm): Show effect on click like when using mat-icon-button. -->
-<div class="kd-resource-card-list-filter-wrapper"
+<div class="xc-resource-card-list-filter-wrapper"
      fxFlex>
-  <div class="kd-search-container"
+  <div class="xc-search-container"
        fxFlex
        fxLayoutAlign="flex-end">
     <input #filterInput
@@ -26,15 +27,15 @@ limitations under the License.
            (click)="$event.stopPropagation()"
            name="search"
            placeholder="Filter"
-           class="kd-search-input">
-    <mat-icon class="kd-search-icon"
+           class="xc-search-input">
+    <mat-icon class="xc-search-icon"
               i18n-matTooltip
               matTooltip="Filter objects by name"
               *ngIf="!isSearchVisible()"
               (click)="switchSearchVisibility($event)">
       filter_list
     </mat-icon>
-    <mat-icon class="material-icons kd-search-icon"
+    <mat-icon class="material-icons xc-search-icon"
               *ngIf="isSearchVisible()"
               (click)="clearInput($event)">
       close

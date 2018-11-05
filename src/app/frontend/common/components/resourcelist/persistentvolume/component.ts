@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,7 @@ import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
 @Component({
-  selector: 'kd-persistent-volume-list',
+  selector: 'xc-persistent-volume-list',
   templateUrl: './template.html',
 })
 export class PersistentVolumeListComponent extends
@@ -45,9 +46,9 @@ export class PersistentVolumeListComponent extends
     this.registerActionColumn<MenuComponent>('menu', MenuComponent);
 
     // Register status icon handlers
-    this.registerBinding(this.icon.checkCircle, 'kd-success', this.isInSuccessState);
-    this.registerBinding(this.icon.help, 'kd-muted', this.isInPendingState);
-    this.registerBinding(this.icon.error, 'kd-error', this.isInErrorState);
+    this.registerBinding(this.icon.checkCircle, 'xc-success', this.isInSuccessState);
+    this.registerBinding(this.icon.help, 'xc-muted', this.isInPendingState);
+    this.registerBinding(this.icon.error, 'xc-error', this.isInErrorState);
   }
 
   getResourceObservable(params?: HttpParams): Observable<PersistentVolumeList> {

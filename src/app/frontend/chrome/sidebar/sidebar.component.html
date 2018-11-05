@@ -1,0 +1,130 @@
+<!--
+Copyright 2018 The XCloud Team.
+Copyright 2017 The Kubernetes Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<div class="sidebar"
+     data-active-color="green"
+     data-background-color="black"
+     data-image="../assets/img/sidebar-1.jpg">
+  <div class="sidebar-background"
+       style="background-image: url(assets/img/sidebar-1.jpg)"></div>
+
+  <div class="logo">
+    <div class="logo-normal">
+      <a href="https://junchen.cloud"
+         target="_blank"
+         class="simple-text">
+              光速云 XCLOUD
+          </a>
+    </div>
+    <div class="logo-img">
+      <img src="/assets/img/xcloud-logo.png" />
+    </div>
+  </div>
+
+
+  <div class="sidebar-wrapper">
+
+    <div class="nav-mobile-menu">
+      <div class="user">
+        <div class="photo">
+          <img src="../assets/img/faces/avatar.jpg" />
+        </div>
+        <div class="info">
+          <a data-toggle="collapse"
+             href="#collapseExample"
+             class="collapsed">
+                          <span>
+                              Tania Andrew
+                              <b class="caret"></b>
+                          </span>
+            </a>
+          <div class="collapse"
+               id="collapseExample">
+            <ul class="nav">
+              <li>
+                <a href="javascript:void(0)">
+                    <span class="sidebar-mini">MP</span>
+                    <span class="sidebar-normal">My Profile</span>
+                  </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                    <span class="sidebar-mini">EP</span>
+                    <span class="sidebar-normal">Edit Profile</span>
+                  </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                    <span class="sidebar-mini">S</span>
+                    <span class="sidebar-normal">Settings</span>
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-mobile-menu">
+        <li>
+          <a>
+              <i class="material-icons">notifications</i>
+              <span class="notification">5</span>
+              <p class="hidden-lg hidden-md">
+                Notifications
+              </p>
+            </a>
+
+        </li>
+        <li class="separator hidden-lg hidden-md"></li>
+      </ul>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav">
+        <li *ngFor="let menu of menuList"
+            uiSrefActive="{{menu.children==null || menu.children.length==0 ? 'active visible' : 'active'}}">
+          <a *ngIf="menu.children==null || menu.children.length == 0"
+             uiSref="{{menu.state}}">
+                  <i class="material-icons">{{menu.icon}}</i>
+                  <p>{{menu.title}}</p>
+                </a>
+          <a *ngIf="menu.children?.length > 0"
+             href="#{{menu.title}}"
+             data-toggle="collapse">
+                  <i class="material-icons">{{menu.icon}}</i>
+                  <p>{{menu.title}}
+                      <b class="caret"></b>
+                  </p>
+                </a>
+          <div *ngIf="menu.children?.length > 0"
+               class="collapse"
+               id="{{menu.title}}">
+            <ul *ngFor="let child of menu.children"
+                class="nav">
+              <li uiSrefActive="active visible">
+                <a uiSref="{{child.state}}">
+                        <span class="sidebar-mini"><i class="material-icons">{{child.icon}}</i></span>
+                        <span class="sidebar-normal">{{child.title}}</span>
+                      </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,23 +15,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card [initialized]="initialized">
+<xc-card [initialized]="initialized">
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="creator?.objectMeta.name">
-      <span class="kd-muted-light">Name:&nbsp;</span>
+      <span class="xc-muted-light">Name:&nbsp;</span>
       <span>{{creator.objectMeta.name}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="creator?.typeMeta.kind">
-      <span class="kd-muted-light">Kind:&nbsp;</span>
+      <span class="xc-muted-light">Kind:&nbsp;</span>
       <span>{{creator.typeMeta.kind}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="creator?.objectMeta.creationTimestamp">
-      <span class="kd-muted-light">Age:&nbsp;</span>
+      <span class="xc-muted-light">Age:&nbsp;</span>
       <span>{{creator?.objectMeta.creationTimestamp | kdRelativeTime}}</span>
     </div>
   </div>
@@ -38,43 +39,43 @@ limitations under the License.
   <div content
        fxFlex
        fxLayout="row wrap">
-    <kd-property>
+    <xc-property>
       <div key>Name</div>
       <a value
          [href]="getHref()">
         {{creator?.objectMeta.name}}
       </a>
-    </kd-property>
+    </xc-property>
 
-    <kd-property>
+    <xc-property>
       <div key>Kind</div>
       <div value>{{creator?.typeMeta.kind}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property>
+    <xc-property>
       <div key>Pods</div>
       <div value>{{creator?.pods.running}} / {{creator?.pods.desired}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property>
+    <xc-property>
       <div key>Age</div>
       <div value>{{creator?.objectMeta.creationTimestamp | kdRelativeTime}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="creator?.objectMeta?.labels"
+    <xc-property *ngIf="creator?.objectMeta?.labels"
                  fxFlex="100">
       <div key>Labels</div>
       <div value>
-        <kd-chips [map]="creator.objectMeta.labels"></kd-chips>
+        <xc-chips [map]="creator.objectMeta.labels"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="creator?.containerImages"
+    <xc-property *ngIf="creator?.containerImages"
                  fxFlex="100">
       <div key>Images</div>
       <div value>
-        <kd-chips [map]="creator.containerImages"></kd-chips>
+        <xc-chips [map]="creator.containerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>

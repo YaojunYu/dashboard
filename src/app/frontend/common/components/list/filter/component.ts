@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +20,7 @@ import {Component, ElementRef, EventEmitter, OnInit, ViewChild} from '@angular/c
 import {Subject} from 'rxjs/Subject';
 
 @Component({
-  selector: 'kd-card-list-filter',
+  selector: 'xc-card-list-filter',
   templateUrl: './template.html',
   styleUrls: ['style.scss'],
 })

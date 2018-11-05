@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'kd-cluster-role-list-state',
-  template: '<kd-cluster-role-list></kd-cluster-role-list>',
+  selector: 'xc-cluster-role-list-state',
+  template: '<xc-cluster-role-list></xc-cluster-role-list>',
 })
 export class ClusterRoleListComponent {}

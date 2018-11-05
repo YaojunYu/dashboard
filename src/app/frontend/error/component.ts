@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,13 +18,11 @@ import {StateService} from '@uirouter/core';
 
 import {KdError} from '../common/errors/errors';
 import {ErrorStateParams} from '../common/params/params';
-import {NavService} from '../common/services/nav/service';
 
-@Component({selector: 'kd-error', templateUrl: './template.html', styleUrls: ['./style.scss']})
+@Component({selector: 'xc-error', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class ErrorComponent implements OnInit {
   private error_: KdError;
-  constructor(private readonly nav_: NavService, private readonly state_: StateService) {
-    this.nav_.setVisibility(false);
+  constructor(private readonly state_: StateService) {
   }
 
   ngOnInit(): void {

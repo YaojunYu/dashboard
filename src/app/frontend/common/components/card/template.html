@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,29 +15,29 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<mat-card [ngClass]="{'kd-minimized-card': !expanded}">
+<mat-card [ngClass]="{'xc-minimized-card': !expanded}">
   <mat-card-title *ngIf="withTitle"
                   (click)="expand()"
                   [ngClass]="getTitleClasses()"
                   fxLayoutAlign=" center">
-    <div class="kd-card-title"
+    <div class="xc-card-title"
          fxFlex>
       <ng-content select="[title]"></ng-content>
     </div>
 
     <div *ngIf="!expanded"
-         class="kd-card-description kd-muted"
+         class="xc-card-description xc-muted"
          fxLayoutAlign=" center"
          fxFlex="80">
       <ng-content select="[description]"></ng-content>
     </div>
 
     <div *ngIf="expanded && expandable"
-         class="kd-card-actions kd-muted">
+         class="xc-card-actions xc-muted">
       <ng-content select="[actions]"></ng-content>
     </div>
 
-    <mat-icon class="kd-card-toggle kd-muted"
+    <mat-icon class="xc-card-toggle xc-muted"
               i18n-matTooltip
               [matTooltip]="expanded ? 'Minimize card' : 'Expand card'"
               *ngIf="expandable">
@@ -46,10 +47,10 @@ limitations under the License.
   </mat-card-title>
 
   <div [@expandInOut]="!expanded">
-    <mat-divider class="kd-on-top"></mat-divider>
+    <mat-divider class="xc-on-top"></mat-divider>
 
-    <mat-card-content class="kd-card-content"
-                      [ngClass]="{'kd-card-content-table': role === 'table'}">
+    <mat-card-content class="xc-card-content"
+                      [ngClass]="{'xc-card-content-table': role === 'table'}">
       <div *ngIf="initialized; else loading">
         <ng-content select="[content]"></ng-content>
       </div>
@@ -60,7 +61,7 @@ limitations under the License.
 
     <mat-card-footer>
       <div class="mat-small"
-           [ngClass]="{'kd-card-footer': withFooter}">
+           [ngClass]="{'xc-card-footer': withFooter}">
         <ng-content select="[footer]"></ng-content>
       </div>
     </mat-card-footer>

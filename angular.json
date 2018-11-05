@@ -29,7 +29,13 @@
               "node_modules/xterm/dist/xterm.css",
               "src/app/frontend/index.scss"
             ],
-            "scripts": ["node_modules/sockjs-client/dist/sockjs.min.js"]
+            "scripts": [
+              "node_modules/sockjs-client/dist/sockjs.min.js",
+
+
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {

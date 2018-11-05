@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +28,7 @@ export function configureRouter(router: UIRouter): void {
 
   // Register default error handler for state transition errors.
   stateService.defaultErrorHandler((err) => {
+    console.log('error', err)
     stateService.go('error', {error: err});
   });
 

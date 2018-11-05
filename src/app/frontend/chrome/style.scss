@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@
 
 @import '../variables';
 
-%kd-toolbar-logo-placeholder {
+%xc-toolbar-logo-placeholder {
   height: 4 * $baseline-grid;
   margin-right: $baseline-grid;
   min-height: 4 * $baseline-grid;
@@ -22,37 +23,37 @@
   width: 4 * $baseline-grid;
 }
 
-.kd-toolbar {
+.xc-toolbar {
   height: 6 * $baseline-grid;
   min-height: 6 * $baseline-grid;
   padding-left: 1.75 * $baseline-grid;
 }
 
-.kd-toolbar-tools {
+.xc-toolbar-tools {
   align-items: center;
   height: 6 * $baseline-grid;
   margin: auto;
   padding-left: $baseline-grid;
 }
 
-.kd-logo-bar {
+.xc-logo-bar {
   height: 4 * $baseline-grid;
 }
 
-.kd-toolbar-logo-link {
-  .kd-toolbar-logo {
-    @extend %kd-toolbar-logo-placeholder;
+.xc-toolbar-logo-link {
+  .xc-toolbar-logo {
+    @extend %xc-toolbar-logo-placeholder;
   }
 
-  .kd-toolbar-logo-text {
-    @extend %kd-toolbar-logo-placeholder;
+  .xc-toolbar-logo-text {
+    @extend %xc-toolbar-logo-placeholder;
 
     min-width: 14 * $baseline-grid;
     width: 14 * $baseline-grid;
   }
 }
 
-.kd-second-toolbar {
+.xc-second-toolbar {
   box-shadow: $whiteframe-shadow-1dp;
   height: 7 * $baseline-grid;
   min-height: 7 * $baseline-grid;
@@ -62,7 +63,7 @@
   z-index: 1;
 }
 
-.kd-system-banner {
+.xc-system-banner {
   box-shadow: $whiteframe-shadow-1dp;
   display: inline;
   font-size: $body-font-size-base;
@@ -77,14 +78,14 @@
   z-index: 2;
 }
 
-.kd-chrome-container {
+.xc-chrome-container {
   // Set overflow property to disable margin-collapse, which in turn
   // prevents scrollbar from being always visible.
   overflow-x: hidden;
   position: relative;
 }
 
-.kd-scroll-container {
+.xc-scroll-container {
   overflow-x: auto;
 
   ::before {

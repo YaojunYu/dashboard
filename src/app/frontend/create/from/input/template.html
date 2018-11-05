@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div class="kd-create-from-input-info">
+<div class="xc-create-from-input-info">
   <span *ngIf="areMultipleNamespacesSelected()"
         i18n>
     Enter YAML or JSON content specifying the resources to create to the namespace specified in the file.
@@ -30,7 +31,7 @@ limitations under the License.
   </a>
 </div>
 
-<kd-text-input [(text)]="inputData"></kd-text-input>
+<xc-text-input [(text)]="inputData"></xc-text-input>
 
 <button type="button"
         (click)="create()"

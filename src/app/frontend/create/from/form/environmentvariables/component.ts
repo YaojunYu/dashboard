@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +18,7 @@ import {AbstractControl, ControlValueAccessor, FormArray, FormBuilder, FormContr
 import {EnvironmentVariable} from '@api/backendapi';
 
 @Component({
-  selector: 'kd-environment-variables',
+  selector: 'xc-environment-variables',
   templateUrl: './template.html',
   providers: [
     {

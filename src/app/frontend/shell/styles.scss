@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,13 +29,13 @@ $shell-background-color: #000;
   width: 100%;
 }
 
-.kd-shell-content-card {
+.xc-shell-content-card {
   box-sizing: border-box;
   display: block;
   height: 100%;
   width: 100%;
 
-  .kd-shell-content-card-title {
+  .xc-shell-content-card-title {
     display: inline;
   }
 
@@ -61,7 +62,7 @@ $shell-background-color: #000;
   }
 }
 
-.kd-shell-toolbar-select {
+.xc-shell-toolbar-select {
   display: inline-flex;
   margin: 0;
   width: 180px;

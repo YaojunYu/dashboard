@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,32 +15,32 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card [initialized]="initialized">
-  <div description><span class="kd-muted-light">Image:&nbsp;</span>{{container.image}}</div>
+<xc-card [initialized]="initialized">
+  <div description><span class="xc-muted-light">Image:&nbsp;</span>{{container.image}}</div>
   <div title>{{container.name}}</div>
   <div content
        fxFlex
        fxLayout="row wrap">
-    <kd-property fxFlex="100">
+    <xc-property fxFlex="100">
       <div key>Image</div>
       <div value>{{container.image}}</div>
-    </kd-property>
+    </xc-property>
 
     <div *ngFor="let env of container?.env">
       <ng-container *ngIf="!isSecret(env) && !isConfigMap(env)">
-        <kd-property>
+        <xc-property>
           <div key
                fxLayout>
             {{env.name}}
             <mat-icon matTooltip="Environment variable"
-                      class="kd-env-variable-icon">public</mat-icon>
+                      class="xc-env-variable-icon">public</mat-icon>
           </div>
           <div value>{{env.value}}</div>
-        </kd-property>
+        </xc-property>
       </ng-container>
 
       <ng-container *ngIf="isSecret(env)">
-        <kd-hidden-property>
+        <xc-hidden-property>
           <div key
                fxLayout>
             <a [href]="getEnvSecretHref(env.valueFrom.secretKeyRef)"
@@ -47,16 +48,16 @@ limitations under the License.
               {{env.name}}
             </a>
             <mat-icon matTooltip="Environment variable"
-                      class="kd-env-variable-icon">public</mat-icon>
+                      class="xc-env-variable-icon">public</mat-icon>
           </div>
           <div whenVisible
-               class="kd-code-block">{{formatSecretValue(env.value)}}</div>
+               class="xc-code-block">{{formatSecretValue(env.value)}}</div>
           <div whenHidden>{{formatSecretValue(env.value).length}} bytes</div>
-        </kd-hidden-property>
+        </xc-hidden-property>
       </ng-container>
 
       <ng-container *ngIf="isConfigMap(env)">
-        <kd-hidden-property>
+        <xc-hidden-property>
           <div key
                fxLayout>
             <a [href]="getEnvConfigMapHref(env.valueFrom.configMapKeyRef)"
@@ -64,35 +65,35 @@ limitations under the License.
             {{env.name}}
             </a>
             <mat-icon matTooltip="Environment variable"
-                      class="kd-env-variable-icon">public</mat-icon>
+                      class="xc-env-variable-icon">public</mat-icon>
           </div>
           <div whenVisible
-               class="kd-code-block">{{env.value}}</div>
+               class="xc-code-block">{{env.value}}</div>
           <div whenHidden>{{env.value.length}} bytes</div>
-        </kd-hidden-property>
+        </xc-hidden-property>
       </ng-container>
     </div>
 
-    <kd-property *ngIf="container?.commands?.length"
+    <xc-property *ngIf="container?.commands?.length"
                  fxFlex="100">
       <div key>Commands</div>
       <div value>
-        <div class="kd-code-block kd-no-whitespace">
+        <div class="xc-code-block xc-no-whitespace">
           <div *ngFor="let command of container.commands"
-               class="kd-code-block-font">{{command}}</div>
+               class="xc-code-block-font">{{command}}</div>
         </div>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="container?.args?.length"
+    <xc-property *ngIf="container?.args?.length"
                  fxFlex="100">
       <div key>Arguments</div>
       <div value>
-        <div class="kd-code-block kd-no-whitespace">
+        <div class="xc-code-block xc-no-whitespace">
           <div *ngFor="let arg of container.args"
-               class="kd-code-block-font">{{arg}}</div>
+               class="xc-code-block-font">{{arg}}</div>
         </div>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>

@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,20 +15,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<mat-card class="kd-create-container">
+<mat-card class="xc-create-container">
   <!-- [@.disabled] will disable tab switching animations -->
   <mat-tab-group [@.disabled]="true">
     <mat-tab label="Create from input"
              i18n-label>
-      <kd-create-from-input></kd-create-from-input>
+      <xc-create-from-input></xc-create-from-input>
     </mat-tab>
     <mat-tab label="Create from file"
              i18n-label>
-      <kd-create-from-file></kd-create-from-file>
+      <xc-create-from-file></xc-create-from-file>
     </mat-tab>
     <mat-tab label="Create from form"
              i18n-label>
-      <kd-create-from-form></kd-create-from-form>
+      <xc-create-from-form></xc-create-from-form>
     </mat-tab>
   </mat-tab-group>
 </mat-card>

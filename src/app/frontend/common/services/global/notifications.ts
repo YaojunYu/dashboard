@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,13 +30,13 @@ export class Notification {
 
     switch (severity) {
       case NotificationSeverity.info:
-        this.cssClass = 'kd-success';
+        this.cssClass = 'xc-success';
         break;
       case NotificationSeverity.warning:
-        this.cssClass = 'kd-warning';
+        this.cssClass = 'xc-warning';
         break;
       case NotificationSeverity.error:
-        this.cssClass = 'kd-error';
+        this.cssClass = 'xc-error';
         break;
       default:
         this.cssClass = '';

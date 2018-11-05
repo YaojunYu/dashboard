@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,7 @@ import {NamespacedResourceService} from '../../../services/resource/resource';
 import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
-@Component({selector: 'kd-service-list', templateUrl: './template.html'})
+@Component({selector: 'xc-service-list', templateUrl: './template.html'})
 export class ServiceListComponent extends ResourceListWithStatuses<ServiceList, Service> {
   @Input() endpoint = EndpointManager.resource(Resource.service, true).list();
 
@@ -39,8 +40,8 @@ export class ServiceListComponent extends ResourceListWithStatuses<ServiceList, 
     this.groupId = ListGroupIdentifiers.discovery;
 
     // Register status icon handlers
-    this.registerBinding(this.icon.checkCircle, 'kd-success', this.isInSuccessState.bind(this));
-    this.registerBinding(this.icon.timelapse, 'kd-muted', this.isInPendingState.bind(this));
+    this.registerBinding(this.icon.checkCircle, 'xc-success', this.isInSuccessState.bind(this));
+    this.registerBinding(this.icon.timelapse, 'xc-muted', this.isInPendingState.bind(this));
 
     // Register action columns.
     this.registerActionColumn<MenuComponent>('menu', MenuComponent);

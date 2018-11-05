@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
-  selector: 'kd-namespace-change-dialog',
+  selector: 'xc-namespace-change-dialog',
   templateUrl: 'template.html',
 })
 export class NamespaceChangeDialog {

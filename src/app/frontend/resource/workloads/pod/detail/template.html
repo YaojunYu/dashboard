@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,22 +15,26 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="pod?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="pod?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Pod information</div>
 
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="pod?.podPhase">
-      <span class="kd-muted-light">Status:&nbsp;</span>
+      <span class="xc-muted-light">Status:&nbsp;</span>
       <span>{{pod.podPhase}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="pod?.podIP">
-      <span class="kd-muted-light">IP:&nbsp;</span>
+      <span class="xc-muted-light">IP:&nbsp;</span>
       <span>{{pod.podIP}}</span>
     </div>
   </div>
@@ -37,53 +42,53 @@ limitations under the License.
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="pod?.nodeName">
+    <xc-property *ngIf="pod?.nodeName">
       <div key>Node</div>
       <a value
          [href]="getNodeHref(pod.nodeName)">{{pod.nodeName}}</a>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="pod?.podPhase">
+    <xc-property *ngIf="pod?.podPhase">
       <div key>Status</div>
       <div value>{{pod?.podPhase}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="pod?.podIP">
+    <xc-property *ngIf="pod?.podIP">
       <div key>IP</div>
       <div value>{{pod.podIP}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="pod?.qosClass">
+    <xc-property *ngIf="pod?.qosClass">
       <div key>QoS Class</div>
       <div value>{{pod.qosClass}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="pod?.restartCount !== undefined">
+    <xc-property *ngIf="pod?.restartCount !== undefined">
       <div key>Restarts</div>
       <div value>{{pod.restartCount}}</div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-condition-list [conditions]="pod?.conditions"
-                   [initialized]="isInitialized"></kd-condition-list>
+<xc-condition-list [conditions]="pod?.conditions"
+                   [initialized]="isInitialized"></xc-condition-list>
 
-<kd-creator-card *ngIf="pod?.controller?.typeMeta?.kind"
+<xc-creator-card *ngIf="pod?.controller?.typeMeta?.kind"
                  [creator]="pod?.controller"
-                 [initialized]="isInitialized"></kd-creator-card>
+                 [initialized]="isInitialized"></xc-creator-card>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>
 
 <div *ngIf="pod?.containers?.length"
-     class="kd-card-group-header kd-muted">Containers</div>
-<kd-container-card *ngFor="let container of pod?.containers"
+     class="xc-card-group-header xc-muted">Containers</div>
+<xc-container-card *ngFor="let container of pod?.containers"
                    [container]="container"
                    [namespace]="pod.objectMeta.namespace"
-                   [initialized]="isInitialized"></kd-container-card>
+                   [initialized]="isInitialized"></xc-container-card>
 
 <div *ngIf="pod?.initContainers?.length"
-     class="kd-card-group-header kd-muted">Init containers</div>
-<kd-container-card *ngFor="let container of pod?.initContainers"
+     class="xc-card-group-header xc-muted">Init containers</div>
+<xc-container-card *ngFor="let container of pod?.initContainers"
                    [container]="container"
                    [namespace]="pod.objectMeta.namespace"
-                   [initialized]="isInitialized"></kd-container-card>
+                   [initialized]="isInitialized"></xc-container-card>

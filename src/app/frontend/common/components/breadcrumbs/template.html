@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,19 +15,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div class="kd-breadcrumbs-container kd-accent"
+<div class="xc-breadcrumbs-container"
      fxFlex="auto">
   <div *ngFor="let breadcrumb of breadcrumbs; let last = last"
        [ngSwitch]="last"
-       [ngClass]="{'kd-inline-breadcrumb': !last}">
+       [ngClass]="{'xc-inline-breadcrumb': !last}">
     <a *ngSwitchCase="false"
        [href]="breadcrumb.stateLink"
-       class="kd-faded-breadcrumb">
+       class="xc-faded-breadcrumb">
     {{breadcrumb.label}}
     </a>
     <div *ngSwitchCase="true">{{breadcrumb.label}}</div>
     <mat-icon *ngSwitchCase="false"
-              class="kd-faded-breadcrumb kd-breadcrumb-divider">
+              class="xc-faded-breadcrumb xc-breadcrumb-divider">
       keyboard_arrow_right
     </mat-icon>
   </div>

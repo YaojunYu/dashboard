@@ -1,0 +1,106 @@
+// Copyright 2018 The XCloud Team.
+// Copyright 2017 The Kubernetes Authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+.pagination {
+  > li > a,
+  > li > span {
+    border: 0;
+    border-radius: 30px !important;
+    transition: all .3s;
+    padding: 0px 11px;
+    margin: 0 3px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: $gray-color;
+    font-weight: $font-weight-default;
+    font-size: $mdb-btn-font-size-base;
+    text-transform: uppercase;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      color: $gray-color;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    color: $gray-color;
+    text-align: center;
+
+    &,
+    &:focus,
+    &:hover {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: $white-color;
+      @include shadow-4dp-color($brand-primary);
+    }
+  }
+
+    // Colors
+  &.pagination-info {
+    > .active > a,
+    > .active > span {
+      &,
+      &:focus,
+      &:hover {
+        background-color: $brand-info;
+        border-color: $brand-info;
+        @include shadow-4dp-color($brand-info);
+      }
+    }
+  }
+
+  &.pagination-success {
+    > .active > a,
+    > .active > span {
+      &,
+      &:focus,
+      &:hover {
+        background-color: $brand-success;
+        border-color: $brand-success;
+        @include shadow-4dp-color($brand-success);
+      }
+    }
+  }
+
+  &.pagination-warning {
+    > .active > a,
+    > .active > span {
+      &,
+      &:focus,
+      &:hover {
+        background-color: $brand-warning;
+        border-color: $brand-warning;
+        @include shadow-4dp-color($brand-warning);
+      }
+    }
+  }
+
+  &.pagination-danger {
+    > .active > a,
+    > .active > span {
+      &,
+      &:focus,
+      &:hover {
+        background-color: $brand-danger;
+        border-color: $brand-danger;
+        @include shadow-4dp-color($brand-danger);
+      }
+    }
+  }
+}

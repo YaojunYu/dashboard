@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 @import '~@angular/material/theming';
 @import './theming';
 
-$kd-light-palette-primary: (
+$xc-light-palette-primary: (
   // Used for primary toolbar button
   50: #326de6,
   100: #000,
@@ -49,7 +50,7 @@ $kd-light-palette-primary: (
   )
 );
 
-$kd-light-palette-warn: (
+$xc-light-palette-warn: (
   50: #00c752, // Chart green.
   100: #008000,
   200: #326de6, // Chart blue.
@@ -83,16 +84,16 @@ $kd-light-palette-warn: (
 );
 
 // sass-lint:disable function-name-format
-$kd-light-palette-accent: map_merge($mat-blue, (500: #fff));
+$xc-light-palette-accent: map_merge($mat-blue, (500: #000));
 // sass-lint:enable function-name-format
 
-$kd-light-theme-primary: mat-palette($kd-light-palette-primary);
-$kd-light-theme-accent: mat-palette($kd-light-palette-accent);
-$kd-light-theme-warn: mat-palette($kd-light-palette-warn);
+$xc-light-theme-primary: mat-palette($xc-light-palette-primary);
+$xc-light-theme-accent: mat-palette($xc-light-palette-accent);
+$xc-light-theme-warn: mat-palette($xc-light-palette-warn);
 
-$kd-light-theme: mat-light-theme($kd-light-theme-primary, $kd-light-theme-accent, $kd-light-theme-warn);
+$xc-light-theme: mat-light-theme($xc-light-theme-primary, $xc-light-theme-accent, $xc-light-theme-warn);
 
-.kd-light-theme {
-  @include angular-material-theme($kd-light-theme);
-  @include kd-theme($kd-light-theme);
+.xc-light-theme {
+  @include angular-material-theme($xc-light-theme);
+  @include xc-theme($xc-light-theme);
 }

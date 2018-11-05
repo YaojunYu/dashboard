@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +29,7 @@ import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
 @Component({
-  selector: 'kd-storage-class-list',
+  selector: 'xc-storage-class-list',
   templateUrl: './template.html',
 })
 export class StorageClassListComponent extends ResourceListBase<StorageClassList, StorageClass> {

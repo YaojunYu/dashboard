@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component, Input} from '@angular/core';
 import {Animations} from '../../animations/animations';
 
 @Component({
-  selector: 'kd-card',
+  selector: 'xc-card',
   templateUrl: './template.html',
   styleUrls: ['./style.scss'],
   animations: [Animations.expandInOut],
@@ -44,11 +45,11 @@ export class CardComponent {
   getTitleClasses(): {[clsName: string]: boolean} {
     const ngCls = {} as {[clsName: string]: boolean};
     if (!this.expanded) {
-      ngCls['kd-minimized-card-header'] = true;
+      ngCls['xc-minimized-card-header'] = true;
     }
 
     if (this.expandable) {
-      ngCls['kd-card-header'] = true;
+      ngCls['xc-card-header'] = true;
     }
 
     for (const cls of this.classes_) {

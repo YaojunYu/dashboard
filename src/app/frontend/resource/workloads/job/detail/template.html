@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,22 +15,26 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="job?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="job?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Job information</div>
 
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="job?.completions">
-      <span class="kd-muted-light">Completions:&nbsp;</span>
+      <span class="xc-muted-light">Completions:&nbsp;</span>
       <span>{{job.completions}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="job?.parallelism">
-      <span class="kd-muted-light">Parallelism:&nbsp;</span>
+      <span class="xc-muted-light">Parallelism:&nbsp;</span>
       <span>{{job.parallelism}}</span>
     </div>
   </div>
@@ -37,36 +42,36 @@ limitations under the License.
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="job?.completions">
+    <xc-property *ngIf="job?.completions">
       <div key>Completions</div>
       <div value>{{job.completions}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="job?.parallelism">
+    <xc-property *ngIf="job?.parallelism">
       <div key>Parallelism</div>
       <div value>{{job.parallelism}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="job?.containerImages"
+    <xc-property *ngIf="job?.containerImages"
                  fxFlex="100">
       <div key>Images</div>
       <div value>
-        <kd-chips [map]="job.containerImages"></kd-chips>
+        <xc-chips [map]="job.containerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="job?.initContainerImages">
+    <xc-property *ngIf="job?.initContainerImages">
       <div key>Init images</div>
       <div value>
-        <kd-chips [map]="job.initContainerImages"></kd-chips>
+        <xc-chips [map]="job.initContainerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-pod-status-card [podInfo]="job?.podInfo"
-                    [initialized]="isInitialized"></kd-pod-status-card>
+<xc-pod-status-card [podInfo]="job?.podInfo"
+                    [initialized]="isInitialized"></xc-pod-status-card>
 
-<kd-pod-list [endpoint]="podListEndpoint"></kd-pod-list>
+<xc-pod-list [endpoint]="podListEndpoint"></xc-pod-list>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>

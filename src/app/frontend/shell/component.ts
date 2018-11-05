@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,7 @@ import {NamespacedResourceService} from '../common/services/resource/resource';
 // tslint:disable-next-line:no-any
 declare let SockJS: any;
 
-@Component({selector: 'kd-shell', templateUrl: './template.html', styleUrls: ['./styles.scss']})
+@Component({selector: 'xc-shell', templateUrl: './template.html', styleUrls: ['./styles.scss']})
 export class ShellComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('anchor') anchorRef: ElementRef;
   term: Terminal;

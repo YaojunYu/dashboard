@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,11 +20,11 @@ import {LocalSettingsService} from './common/services/global/localsettings';
 import {ThemeService} from './common/services/global/theme';
 
 enum Themes {
-  Light = 'kd-light-theme',
-  Dark = 'kd-dark-theme'
+  Light = 'xc-light-theme',
+  Dark = 'xc-dark-theme'
 }
 
-@Component({selector: 'kd-root', template: '<ui-view [ngClass]="getTheme()"></ui-view>'})
+@Component({selector: 'xc-root', template: '<ui-view [ngClass]="getTheme()"></ui-view>'})
 export class RootComponent implements OnInit {
   private isLightThemeEnabled_: boolean;
 

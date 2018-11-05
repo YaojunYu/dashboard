@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ import {errorState} from '../../error/state';
 
 import {SaveAnywayDialog} from './saveanywaysdialog/dialog';
 
-@Component({selector: 'kd-global-settings', templateUrl: './template.html'})
+@Component({selector: 'xc-global-settings', templateUrl: './template.html'})
 export class GlobalSettingsComponent implements OnInit {
   // Keep it in sync with ConcurrentSettingsChangeError constant from the backend.
   private readonly concurrentChangeErr_ = 'settings changed since last reload';

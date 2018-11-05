@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,18 +15,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<h2 mat-dialog-title>Edit a resource</h2>
-<mat-dialog-content class="kd-dialog-text">
+<h2 mat-dialog-title>
+
+
+
+  Edit a resource</h2>
+<mat-dialog-content class="xc-dialog-text">
   <mat-button-toggle-group #group="matButtonToggleGroup">
     <mat-button-toggle [value]="modes.YAML"
                        [checked]="true">YAML</mat-button-toggle>
     <mat-button-toggle [value]="modes.JSON">JSON</mat-button-toggle>
   </mat-button-toggle-group>
 
-  <kd-text-input [(text)]="text"
+  <xc-text-input [(text)]="text"
                  [prettify]="false"
-                 [mode]="getSelectedMode()"></kd-text-input>
-  <div class="kd-equivalent-block kd-muted kd-bg-card-dark"
+                 [mode]="getSelectedMode()"></xc-text-input>
+  <div class="xc-equivalent-block xc-muted xc-bg-card-dark"
        fxLayoutAlign=" center">
     <mat-icon>info</mat-icon>
     <div>

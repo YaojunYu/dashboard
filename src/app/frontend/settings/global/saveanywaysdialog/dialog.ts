@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 import {Component} from '@angular/core';
 import {MatDialogRef} from '@angular/material';
 
-@Component({selector: 'kd-settings-save-anyway-dialog', templateUrl: 'template.html'})
+@Component({selector: 'xc-settings-save-anyway-dialog', templateUrl: 'template.html'})
 export class SaveAnywayDialog {
   constructor(public dialogRef: MatDialogRef<SaveAnywayDialog>) {}
 

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +24,7 @@ import {ChromeModule} from './chrome/module';
 import {chromeState} from './chrome/state';
 import {CoreModule} from './core.module';
 import {createFutureState} from './create/state';
+import {dashboardFutureState, dashboardState} from './dashboard/state';
 import {ErrorModule} from './error/module';
 import {RootComponent} from './index.component';
 import {configureRouter} from './index.router.config';
@@ -104,11 +106,12 @@ import {shellFutureState} from './shell/state';
         settingsFutureState,
         searchFutureState,
         overviewFutureState,
+        dashboardFutureState,
         // logsState,
         shellFutureState,
       ],
       useHash: true,
-      otherwise: {state: overviewState.name},
+      otherwise: {state: dashboardState.name},  // 默认界面
       config: configureRouter,
     }),
   ],

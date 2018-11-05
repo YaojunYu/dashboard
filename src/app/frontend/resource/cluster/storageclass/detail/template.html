@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,27 +15,31 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="storageClass?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="storageClass?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Storage Class information</div>
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="storageClass?.provisioner"
+    <xc-property *ngIf="storageClass?.provisioner"
                  fxFlex="100">
       <div key>Provisioner</div>
       <div value>{{storageClass?.provisioner}}</div>
-    </kd-property>
-    <kd-property *ngFor="let parameter of getParameterNames()">
+    </xc-property>
+    <xc-property *ngFor="let parameter of getParameterNames()">
       <div key
            fxLayout>
         {{parameter}}
         <mat-icon matTooltip="Parameter"
-                  class="kd-storage-class-parameter-icon">tune</mat-icon>
+                  class="xc-storage-class-parameter-icon">tune</mat-icon>
       </div>
       <div value>{{storageClass?.parameters[parameter]}}</div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>

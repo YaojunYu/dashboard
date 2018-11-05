@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +25,7 @@ import {EndpointManager, Resource} from '../../../../common/services/resource/en
 import {ResourceService} from '../../../../common/services/resource/resource';
 
 @Component({
-  selector: 'kd-persistent-volume-detail',
+  selector: 'xc-persistent-volume-detail',
   templateUrl: './template.html',
 })
 export class PersistentVolumeDetailComponent implements OnInit, OnDestroy {

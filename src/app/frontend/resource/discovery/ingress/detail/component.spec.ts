@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -105,7 +106,7 @@ describe('IngressDetailComponent', () => {
 
     fixture.detectChanges();
     const debugElement = fixture.debugElement.query(
-        By.css('kd-property.object-meta-name div.kd-property-value div'));
+        By.css('xc-property.object-meta-name div.xc-property-value div'));
     expect(debugElement).toBeTruthy();
 
     const htmlElement = debugElement.nativeElement;
@@ -118,7 +119,7 @@ describe('IngressDetailComponent', () => {
 
     fixture.detectChanges();
     const debugElement = fixture.debugElement.query(
-        By.css('kd-property.object-meta-name div.kd-property-value div'));
+        By.css('xc-property.object-meta-name div.xc-property-value div'));
     expect(debugElement).toBeTruthy();
 
     const htmlElement = debugElement.nativeElement;

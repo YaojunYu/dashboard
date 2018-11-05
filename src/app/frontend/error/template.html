@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,37 +16,37 @@ limitations under the License.
 -->
 
 <div fxLayoutAlign="center">
-  <kd-card fxFlex="none"
+  <xc-card fxFlex="none"
            [expandable]="false">
     <div title
          fxLayout>
-      <mat-icon class="kd-error-icon">error_outline</mat-icon>
+      <mat-icon class="xc-error-icon">error_outline</mat-icon>
       <div>{{getErrorStatus()}}</div>
     </div>
 
     <div content>
       {{getErrorData()}}
     </div>
-  </kd-card>
+  </xc-card>
 </div>
 
 
-<!--<div class="kd-error-center-fixed">
+<!--<div class="xc-error-center-fixed">
   <div layout="column"
        layout-align="center center">
     <div flex="auto"
-         class="kd-error-block">
-      <h2 class="md-headline kd-error-view-header">
-        <i class="material-icons kd-error-view-icon">error_outline</i>
+         class="xc-error-block">
+      <h2 class="md-headline xc-error-view-header">
+        <i class="material-icons xc-error-view-icon">error_outline</i>
         <span>{{ctrl.getErrorStatus()}}</span>
       </h2>
-      <pre ng-class="{'kd-error-spacer': ctrl.isKnownError()}">{{ctrl.getErrorData()}}</pre>
+      <pre ng-class="{'xc-error-spacer': ctrl.isKnownError()}">{{ctrl.getErrorData()}}</pre>
       <pre ng-if="ctrl.isNotFoundError()">[[Redirecting to previous state in 3 seconds...|Redirect info in case of 404 error.]]</pre>
       <div ng-if="!ctrl.isKnownError()"
            layout="row"
            layout-align="end center">
         <a ng-href="{{ctrl.getLinkToFeedbackPage()}}">
-          <md-button class="kd-error-feedback-button">
+          <md-button class="xc-error-feedback-button">
             [[Send feedback|Label for a button displayed on error page used to send feedback to GitHub new issue.]]
           </md-button>
         </a>

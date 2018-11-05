@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,25 +16,19 @@
 import {NgModule} from '@angular/core';
 
 import {ComponentsModule} from '../common/components/module';
+import {MdModule} from '../md/md.module';
 import {SharedModule} from '../shared.module';
 
 import {ChromeComponent} from './component';
-import {NavModule} from './nav/module';
-import {NotificationsComponent} from './notifications/component';
-import {SearchComponent} from './search/component';
-import {UserPanelComponent} from './userpanel/component';
+import {FooterComponent} from './footer/footer.component';
+import {NavbarModule} from './navbar/module';
+import {SidebarModule} from './sidebar/module';
 
 @NgModule({
   declarations: [
     ChromeComponent,
-    SearchComponent,
-    NotificationsComponent,
-    UserPanelComponent,
+    FooterComponent,
   ],
-  imports: [
-    SharedModule,
-    ComponentsModule,
-    NavModule,
-  ]
+  imports: [SharedModule, ComponentsModule, NavbarModule, SidebarModule, MdModule]
 })
 export class ChromeModule {}

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,41 +32,41 @@
   }
 }
 
-.kd-card-header:hover {
+.xc-card-header:hover {
   cursor: pointer;
 }
 
-.kd-card-actions {
+.xc-card-actions {
   display: block;
   padding: $baseline-grid (2 * $baseline-grid);
 }
 
-.kd-card-toggle {
+.xc-card-toggle {
   cursor: pointer;
   margin-right: (3 * $baseline-grid);
   outline: none;
 }
 
-.kd-card-content {
+.xc-card-content {
   margin: 0;
   padding: 2 * $baseline-grid;
 }
 
-.kd-card-content-table {
+.xc-card-content-table {
   padding: 0;
 }
 
-.kd-card-title {
+.xc-card-title {
   font-size: $title-font-size-base;
   margin-right: $baseline-grid;
   padding: $baseline-grid 0 $baseline-grid (2 * $baseline-grid);
 }
 
-.kd-card-description {
+.xc-card-description {
   font-size: $subhead-font-size-base-lg;
 }
 
-.kd-card-footer {
+.xc-card-footer {
   font-size: $footer-font-size-base;
   padding: 0 (2 * $baseline-grid) $baseline-grid;
 }

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {HTMLInputEvent, KdFile} from '@api/frontendapi';
 
 @Component({
-  selector: 'kd-upload-file',
+  selector: 'xc-upload-file',
   templateUrl: 'template.html',
   styleUrls: ['style.scss'],
 })

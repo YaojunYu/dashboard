@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,16 +13,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import './dark';
 @import './light';
 @import './variables';
 @import './mixins';
-
-/////////////////////////////////
-// Overrides of default styles //
-/////////////////////////////////
-
+@import '~bootstrap/dist/css/bootstrap.css'; // == 3.3.5
+@import './assets/scss/material-dashboard';
+//
+///////////////////////////////////
+//// Overrides of default styles //
+///////////////////////////////////
+//
 html,
 body {
   height: 100%;
@@ -43,13 +46,7 @@ code {
   padding: .25 * $baseline-grid;
 }
 
-* {
-  &::-webkit-scrollbar {
-    background: transparent;
-    height: $baseline-grid;
-    width: $baseline-grid;
-  }
-}
+
 
 //////////////////////////////////////////
 // Overrides of Angular Material styles //
@@ -149,30 +146,30 @@ code {
 // Custom classes used across application //
 ////////////////////////////////////////////
 
-.kd-equivalent-block {
+.xc-equivalent-block {
   border-radius: $baseline-grid / 4;
   font-size: $body-font-size-base;
   margin: (1.5 * $baseline-grid) 0;
   padding: $baseline-grid;
 
   mat-icon {
-    @include kd-icon-size(3 * $baseline-grid);
+    @include xc-icon-size(3 * $baseline-grid);
 
     margin-right: $baseline-grid;
   }
 }
 
-.kd-dialog-text {
+.xc-dialog-text {
   font-family: $font-family-sans;
   padding-bottom: .5 * $baseline-grid;
   padding-top: 0;
 }
 
-.kd-toolbar-action {
+.xc-toolbar-action {
   margin: 0 (.75 * $baseline-grid) !important;
 }
 
-.kd-code-block {
+.xc-code-block {
   border-radius: $baseline-grid / 4;
   display: block;
   font-family: $font-family-monospace;
@@ -181,11 +178,11 @@ code {
   white-space: pre-wrap;
 }
 
-.kd-code-block-font {
+.xc-code-block-font {
   font-size: $body-font-size-base;
 }
 
-.kd-minimized-card {
+.xc-minimized-card {
   margin: 0 (2.5 * $baseline-grid);
   outline: none;
 
@@ -194,53 +191,53 @@ code {
   }
 }
 
-.kd-inline-property {
+.xc-inline-property {
   display: inline-flex;
   margin-right: 3 * $baseline-grid;
 }
 
-.kd-card-group-header {
+.xc-card-group-header {
   font-family: $font-family-sans;
   font-size: $title-font-size-base;
   margin: (3 * $baseline-grid) 0 (2.5 * $baseline-grid) (4.5 * $baseline-grid);
 }
 
-.kd-card-top-radius {
+.xc-card-top-radius {
   border-top-left-radius: .25 * $baseline-grid;
   border-top-right-radius: .25 * $baseline-grid;
 }
 
-.kd-bold {
+.xc-bold {
   font-weight: $bold-font-weight;
 }
 
-.kd-h1 {
+.xc-h1 {
   font-size: 24px;
 }
 
-.kd-h3 {
+.xc-h3 {
   font-size: 16px;
 }
 
-.kd-card-padding {
+.xc-card-padding {
   padding: 2.5 * $baseline-grid;
 }
 
-.kd-no-margin {
+.xc-no-margin {
   margin: 0;
 }
 
-.kd-margin-bottom {
+.xc-margin-bottom {
   margin-bottom: $baseline-grid;
 }
 
-.kd-slider-value {
+.xc-slider-value {
   font-size: $subhead-font-size-base-lg;
   text-align: right;
   width: 2 * $baseline-grid;
 }
 
-.kd-comma-separated-item {
+.xc-comma-separated-item {
   display: inline-block;
 
   &:not(:last-child) {
@@ -250,14 +247,14 @@ code {
   }
 }
 
-.kd-pre-block {
+.xc-pre-block {
   margin: 0;
   min-width: 0;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-.kd-loading-shade {
+.xc-loading-shade {
   align-items: center;
   bottom: 0;
   display: flex;
@@ -269,28 +266,28 @@ code {
   z-index: 1;
 }
 
-.kd-on-top {
+.xc-on-top {
   z-index: 100;
 }
 
-.kd-clickable {
+.xc-clickable {
   cursor: pointer !important;
 }
 
-.kd-no-bottom-border {
+.xc-no-bottom-border {
   border-bottom: 0 !important;
 }
 
 // This is a workaround to remove whitespace from code block element.
-.kd-no-whitespace {
+.xc-no-whitespace {
   font-size: 0;
 }
 
-.kd-hidden {
+.xc-hidden {
   display: none !important;
 }
 
-.kd-table-no-footer {
+.xc-table-no-footer {
   .mat-row:last-of-type {
     border-bottom: 0;
   }

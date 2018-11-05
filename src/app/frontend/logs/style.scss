@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,37 +22,37 @@ $logs-color-white: #fff;
 $emphasis: #000;
 $content-background: #fff;
 
-.kd-logs-container {
+.xc-logs-container {
   box-sizing: border-box;
   height: 100%;
   padding-bottom: 35px;
 }
 
-.kd-logs-color-icon {
+.xc-logs-color-icon {
   background-color: $logs-color-black;
   color: $logs-color-white;
 }
 
-.kd-logs-text-color-invert {
+.xc-logs-text-color-invert {
   background-color: $logs-color-black;
   color: $logs-color-white;
 }
 
-.kd-logs-text-color {
+.xc-logs-text-color {
   background-color: $logs-color-white;
   color: $logs-color-black;
 }
 
-.kd-logs-size-icon {
+.xc-logs-size-icon {
   color: $logs-color-black;
 }
 
-.kd-logs-size-icon-compact {
+.xc-logs-size-icon-compact {
   color: $logs-color-black;
   transform: scale(-1, 1);
 }
 
-.kd-log-view {
+.xc-log-view {
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex: 1;
@@ -60,53 +61,53 @@ $content-background: #fff;
   width: 100%;
 }
 
-.kd-log-line {
+.xc-log-line {
   white-space: pre-wrap;
 }
 
-%kd-logs-element-base {
+%xc-logs-element-base {
   padding: 0 (2 * $baseline-grid);
   word-wrap: break-word;
 }
 
-.kd-logs-element {
-  @extend %kd-logs-element-base;
+.xc-logs-element {
+  @extend %xc-logs-element-base;
 
   font-size: $body-font-size-base;
 }
 
-.kd-logs-element-compact {
-  @extend %kd-logs-element-base;
+.xc-logs-element-compact {
+  @extend %xc-logs-element-base;
 
   font-size: $caption-font-size-base;
 }
 
-.kd-logs-toolbar-select {
+.xc-logs-toolbar-select {
   display: inline-flex;
   flex-grow: 1;
   margin: 0;
   position: relative;
 }
 
-.kd-logs-style-buttons {
+.xc-logs-style-buttons {
   float: right;
 }
 
-.kd-cross-line-black {
+.xc-cross-line-black {
   stroke: $emphasis;
   stroke-width: 2;
 }
 
-.kd-cross-line-white {
+.xc-cross-line-white {
   stroke: $content-background;
   stroke-width: 4;
 }
 
-.kd-logs-info {
+.xc-logs-info {
   padding: 1.5 * $baseline-grid;
 }
 
-.kd-cross-style {
+.xc-cross-style {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -114,7 +115,7 @@ $content-background: #fff;
   top: 0;
 }
 
-.kd-list-pagination-buttons {
+.xc-list-pagination-buttons {
   margin-right: $baseline-grid;
 }
 
@@ -127,12 +128,12 @@ $content-background: #fff;
   vertical-align: middle;
   width: auto;
 
-  &.kd-form-field {
+  &.xc-form-field {
     flex: 1;
   }
 }
 
-.kd-log-view-container {
+.xc-log-view-container {
   -webkit-overflow-scrolling: touch;
   bottom: 50px;
   box-sizing: border-box;
@@ -145,7 +146,7 @@ $content-background: #fff;
   top: 57px;
 }
 
-.kd-virtual-repeat-sizer {
+.xc-virtual-repeat-sizer {
   box-sizing: border-box;
   display: block;
   height: 1px;
@@ -154,7 +155,7 @@ $content-background: #fff;
   width: 1px;
 }
 
-.kd-muted {
+.xc-muted {
   bottom: 0;
   box-sizing: border-box;
   color: $logs-color-black;

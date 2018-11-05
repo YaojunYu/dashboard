@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,13 +15,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card role="table"
+<xc-card role="table"
          [hidden]="isHidden()">
   <div title
        fxLayout="row">Persistent Volumes</div>
-  <div description><span class="kd-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
+  <div description><span class="xc-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
   <div actions>
-    <kd-card-list-filter></kd-card-list-filter>
+    <xc-card-list-filter></xc-card-list-filter>
   </div>
 
   <div content
@@ -52,14 +53,14 @@ limitations under the License.
       <ng-container [matColumnDef]="getDisplayColumns()[2]">
         <mat-header-cell *matHeaderCellDef>Capacity</mat-header-cell>
         <mat-cell *matCellDef="let pv">
-          <kd-chips [map]="pv.capacity"></kd-chips>
+          <xc-chips [map]="pv.capacity"></xc-chips>
         </mat-cell>
       </ng-container>
 
       <ng-container [matColumnDef]="getDisplayColumns()[3]">
         <mat-header-cell *matHeaderCellDef>Access Modes</mat-header-cell>
         <mat-cell *matCellDef="let pv">
-          <kd-chips [map]="pv.accessModes"></kd-chips>
+          <xc-chips [map]="pv.accessModes"></xc-chips>
         </mat-cell>
       </ng-container>
 
@@ -112,8 +113,8 @@ limitations under the License.
                     [matColumnDef]="col.name">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let pv">
-          <kd-dynamic-cell [component]="col.component"
-                           [resource]="pv"></kd-dynamic-cell>
+          <xc-dynamic-cell [component]="col.component"
+                           [resource]="pv"></xc-dynamic-cell>
         </mat-cell>
       </ng-container>
 
@@ -129,6 +130,6 @@ limitations under the License.
 
   <div content
        [hidden]="!showZeroState()">
-    <kd-list-zero-state></kd-list-zero-state>
+    <xc-list-zero-state></xc-list-zero-state>
   </div>
-</kd-card>
+</xc-card>

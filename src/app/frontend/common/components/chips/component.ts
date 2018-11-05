@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,7 +40,7 @@ const URL_REGEXP = new RegExp(
 const MAX_CHIP_VALUE_LENGHT = 63;
 
 @Component({
-  selector: 'kd-chips',
+  selector: 'xc-chips',
   templateUrl: './template.html',
 })
 export class ChipsComponent implements OnInit {

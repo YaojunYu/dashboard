@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +23,7 @@ import {NamespaceService} from '../../../common/services/global/namespace';
 import {overviewState} from '../../../overview/state';
 
 @Component(
-    {selector: 'kd-create-from-file', templateUrl: './template.html', styleUrls: ['./style.scss']})
+    {selector: 'xc-create-from-file', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class CreateFromFileComponent {
   @ViewChild(NgForm) private readonly ngForm: NgForm;
   file: KdFile;

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'kd-ingress-list-state',
-  template: '<kd-ingress-list></kd-ingress-list>',
+  selector: 'xc-ingress-list-state',
+  template: '<xc-ingress-list></xc-ingress-list>',
 })
 export class IngressList {}

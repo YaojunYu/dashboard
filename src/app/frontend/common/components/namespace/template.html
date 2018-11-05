@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,16 +15,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div class="kd-namespace-select-title kd-muted">Namespace</div>
-<mat-form-field class="kd-namespace-select-input-container">
+<div class="xc-namespace-select-title xc-muted">
+
+
+
+  Namespace</div>
+<mat-form-field class="xc-namespace-select-input-container">
   <mat-select (openedChange)="onNamespaceToggle($event)"
               [(ngModel)]="selectedNamespace">
-    <div [ngClass]="{'kd-namespace-select-input-border': namespaces.length > 0}">
+    <div [ngClass]="{'xc-namespace-select-input-border': namespaces.length > 0}">
       <input #namespaceInput
              placeholder="Select namespace..."
              [(ngModel)]="selectNamespaceInput"
              name="selectNamespaceInput"
-             class="kd-namespace-select-input"
+             class="xc-namespace-select-input"
              (keydown)="$event.keyCode === 13 ? selectNamespace() : null">
     </div>
     <mat-option *ngIf="namespaces.length"
@@ -35,7 +40,7 @@ limitations under the License.
         {{namespace}}
       </mat-option>
     </mat-optgroup>
-    <mat-option class="kd-hidden"
+    <mat-option class="xc-hidden"
                 [value]="selectedNamespace">{{formatNamespaceName(selectedNamespace)}}</mat-option>
   </mat-select>
 </mat-form-field>

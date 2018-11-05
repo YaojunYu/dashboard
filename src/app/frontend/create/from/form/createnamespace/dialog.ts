@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ export interface CreateNamespaceDialogMeta { namespaces: string[]; }
  * Displays new namespace creation dialog.
  */
 @Component({
-  selector: 'kd-create-namespace-dialog',
+  selector: 'xc-create-namespace-dialog',
   templateUrl: 'template.html',
 })
 export class CreateNamespaceDialog implements OnInit {

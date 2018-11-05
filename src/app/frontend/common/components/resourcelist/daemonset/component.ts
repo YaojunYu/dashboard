@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +29,7 @@ import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
 @Component({
-  selector: 'kd-daemon-set-list',
+  selector: 'xc-daemon-set-list',
   templateUrl: './template.html',
 })
 export class DaemonSetListComponent extends ResourceListWithStatuses<DaemonSetList, DaemonSet> {
@@ -43,9 +44,9 @@ export class DaemonSetListComponent extends ResourceListWithStatuses<DaemonSetLi
     this.groupId = ListGroupIdentifiers.workloads;
 
     // Register status icon handlers
-    this.registerBinding(this.icon.checkCircle, 'kd-success', this.isInSuccessState);
-    this.registerBinding(this.icon.timelapse, 'kd-muted', this.isInPendingState);
-    this.registerBinding(this.icon.error, 'kd-error', this.isInErrorState);
+    this.registerBinding(this.icon.checkCircle, 'xc-success', this.isInSuccessState);
+    this.registerBinding(this.icon.timelapse, 'xc-muted', this.isInPendingState);
+    this.registerBinding(this.icon.error, 'xc-error', this.isInErrorState);
 
     // Register action columns.
     this.registerActionColumn<MenuComponent>('menu', MenuComponent);

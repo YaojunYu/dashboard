@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,8 +22,8 @@ export class AssetsService {
   private readonly assetsPath_ = 'assets/images';
   private readonly appLogoSvg_ = 'kubernetes-logo.svg';
   private readonly appLogoTextSvg_ = 'kubernetes-logo-text.svg';
-  private readonly appLogoIcon_ = 'kd-logo';
-  private readonly appLogoTextIcon_ = 'kd-logo-text';
+  private readonly appLogoIcon_ = 'xc-logo';
+  private readonly appLogoTextIcon_ = 'xc-logo-text';
 
   constructor(
       @Inject(MatIconRegistry) private readonly iconRegistry_: MatIconRegistry,

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +24,7 @@ import {EndpointManager, Resource} from '../../../../common/services/resource/en
 import {ResourceService} from '../../../../common/services/resource/resource';
 
 @Component({
-  selector: 'kd-cluster-role-detail',
+  selector: 'xc-cluster-role-detail',
   templateUrl: './template.html',
 })
 export class ClusterRoleDetailComponent implements OnInit, OnDestroy {

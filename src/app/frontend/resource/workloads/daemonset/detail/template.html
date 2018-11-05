@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,44 +15,48 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="daemonSet?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="daemonSet?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Daemon Set information</div>
 
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="daemonSet?.labelSelector"
+    <xc-property *ngIf="daemonSet?.labelSelector"
                  fxFlex="100">
       <div key>Selector</div>
       <div value>
-        <kd-chips [map]="daemonSet.labelSelector.matchLabels"></kd-chips>
+        <xc-chips [map]="daemonSet.labelSelector.matchLabels"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="daemonSet?.containerImages">
+    <xc-property *ngIf="daemonSet?.containerImages">
       <div key>Images</div>
       <div value>
-        <kd-chips [map]="daemonSet.containerImages"></kd-chips>
+        <xc-chips [map]="daemonSet.containerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="daemonSet?.initContainerImages">
+    <xc-property *ngIf="daemonSet?.initContainerImages">
       <div key>Init images</div>
       <div value>
-        <kd-chips [map]="daemonSet.initContainerImages"></kd-chips>
+        <xc-chips [map]="daemonSet.initContainerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-pod-status-card [podInfo]="daemonSet?.podInfo"
-                    [initialized]="isInitialized"></kd-pod-status-card>
+<xc-pod-status-card [podInfo]="daemonSet?.podInfo"
+                    [initialized]="isInitialized"></xc-pod-status-card>
 
-<kd-pod-list [endpoint]="podListEndpoint"></kd-pod-list>
+<xc-pod-list [endpoint]="podListEndpoint"></xc-pod-list>
 
-<kd-service-list [endpoint]="serviceListEndpoint"></kd-service-list>
+<xc-service-list [endpoint]="serviceListEndpoint"></xc-service-list>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>

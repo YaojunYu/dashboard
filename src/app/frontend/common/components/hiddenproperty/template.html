@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +15,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-property>
+<xc-property>
   <div key
        fxLayout="row"
        fxLayoutAlign=" center"
-       class="kd-hidden-property-key kd-clickable"
+       class="xc-hidden-property-key xc-clickable"
        (click)="hidden = !hidden">
     <ng-content select="[key]"></ng-content>
-    <mat-icon class="kd-hidden-property-icon">
+    <mat-icon class="xc-hidden-property-icon">
       <ng-container *ngIf="hidden">visibility</ng-container>
       <ng-container *ngIf="!hidden">visibility_off</ng-container>
     </mat-icon>
@@ -37,4 +38,4 @@ limitations under the License.
     </div>
 
   </div>
-</kd-property>
+</xc-property>

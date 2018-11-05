@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,13 +15,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card role="table"
+<xc-card role="table"
          [hidden]="isHidden()">
   <div title
        fxLayout="row">Storage Classes</div>
-  <div description><span class="kd-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
+  <div description><span class="xc-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
   <div actions>
-    <kd-card-list-filter></kd-card-list-filter>
+    <xc-card-list-filter></xc-card-list-filter>
   </div>
 
   <div content
@@ -51,7 +52,7 @@ limitations under the License.
       <ng-container [matColumnDef]="getDisplayColumns()[2]">
         <mat-header-cell *matHeaderCellDef>Parameters</mat-header-cell>
         <mat-cell *matCellDef="let sc">
-          <kd-chips [map]="sc.parameters"></kd-chips>
+          <xc-chips [map]="sc.parameters"></xc-chips>
         </mat-cell>
       </ng-container>
 
@@ -68,8 +69,8 @@ limitations under the License.
                     [matColumnDef]="col.name">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let sc">
-          <kd-dynamic-cell [component]="col.component"
-                           [resource]="sc"></kd-dynamic-cell>
+          <xc-dynamic-cell [component]="col.component"
+                           [resource]="sc"></xc-dynamic-cell>
         </mat-cell>
       </ng-container>
 
@@ -85,6 +86,6 @@ limitations under the License.
 
   <div content
        [hidden]="!showZeroState()">
-    <kd-list-zero-state></kd-list-zero-state>
+    <xc-list-zero-state></xc-list-zero-state>
   </div>
-</kd-card>
+</xc-card>

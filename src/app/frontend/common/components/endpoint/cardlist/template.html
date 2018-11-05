@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +15,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card [initialized]="initialized"
+<xc-card [initialized]="initialized"
          role="table">
   <div title>Endpoints</div>
 
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="endpoints?.length">
-      <span class="kd-muted-light">Items:&nbsp;</span>
+      <span class="xc-muted-light">Items:&nbsp;</span>
       <span>{{endpoints.length}}</span>
     </div>
   </div>
@@ -29,7 +30,7 @@ limitations under the License.
   <div content
        [hidden]="endpoints?.length === 0">
     <mat-table [dataSource]="getDataSource()"
-               class="kd-table-no-footer">
+               class="xc-table-no-footer">
       <ng-container [matColumnDef]="getEndpointsColumns()[0]">
         <mat-header-cell *matHeaderCellDef>Host</mat-header-cell>
         <mat-cell *matCellDef="let endpoint">
@@ -75,6 +76,6 @@ limitations under the License.
 
   <div content
        [hidden]="endpoints?.length != 0">
-    <kd-list-zero-state></kd-list-zero-state>
+    <xc-list-zero-state></xc-list-zero-state>
   </div>
-</kd-card>
+</xc-card>

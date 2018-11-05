@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
 const EVENT_TYPE_WARNING = 'Warning';
 
-@Component({selector: 'kd-event-list', templateUrl: './template.html'})
+@Component({selector: 'xc-event-list', templateUrl: './template.html'})
 export class EventListComponent extends ResourceListWithStatuses<EventList, Event> implements
     OnInit {
   @Input() endpoint: string;
@@ -39,7 +40,7 @@ export class EventListComponent extends ResourceListWithStatuses<EventList, Even
     this.groupId = ListGroupIdentifiers.none;
 
     // Register status icon handler
-    this.registerBinding(this.icon.warning, 'kd-warning', this.isWarning);
+    this.registerBinding(this.icon.warning, 'xc-warning', this.isWarning);
     this.registerBinding(this.icon.none, '', this.isNormal.bind(this));
 
     // Register action columns.

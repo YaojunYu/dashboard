@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +19,7 @@ import {ListGroupIdentifiers} from '../../common/components/resourcelist/groupid
 import {GroupedResourceList} from '../../common/resources/groupedlist';
 
 @Component({
-  selector: 'kd-workloads',
+  selector: 'xc-workloads',
   templateUrl: './template.html',
 })
 export class WorkloadsComponent extends GroupedResourceList {}

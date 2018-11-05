@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component, OnInit} from '@angular/core';
 import {LocalSettings} from '@api/backendapi';
 import {LocalSettingsService} from '../../common/services/global/localsettings';
 
-@Component({selector: 'kd-local-settings', templateUrl: './template.html'})
+@Component({selector: 'xc-local-settings', templateUrl: './template.html'})
 export class LocalSettingsComponent implements OnInit {
   settings: LocalSettings = {} as LocalSettings;
 

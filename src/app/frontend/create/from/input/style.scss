@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@
 
 @import '../../../variables';
 
-.kd-create-from-input-info {
+.xc-create-from-input-info {
   margin-bottom: $baseline-grid * 3;
   padding: 0 (.5 * $baseline-grid);
 
@@ -23,10 +24,10 @@
   }
 }
 
-.kd-create-from-input-button {
+.xc-create-from-input-button {
   margin-left: 0;
 }
 
-kd-text-input::ng-deep ace-editor {
+xc-text-input::ng-deep ace-editor {
   margin-bottom: $baseline-grid * 3;
 }

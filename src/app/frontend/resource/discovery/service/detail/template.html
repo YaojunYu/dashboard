@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,39 +15,43 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="service.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="service.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Service information</div>
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="service?.type">
+    <xc-property *ngIf="service?.type">
       <div key>Type</div>
       <div value>{{service?.type}}</div>
-    </kd-property>
-    <kd-property *ngIf="service?.clusterIP">
+    </xc-property>
+    <xc-property *ngIf="service?.clusterIP">
       <div key>Cluster IP</div>
       <div value>{{service?.clusterIP}}</div>
-    </kd-property>
-    <kd-property *ngIf="service?.sessionAffinity">
+    </xc-property>
+    <xc-property *ngIf="service?.sessionAffinity">
       <div key>Session Affinity</div>
       <div value>{{service?.sessionAffinity}}</div>
-    </kd-property>
-    <kd-property *ngIf="service?.selector"
+    </xc-property>
+    <xc-property *ngIf="service?.selector"
                  fxFlex="100">
       <div key>Selector</div>
       <div value>
-        <kd-chips [map]="service?.selector"></kd-chips>
+        <xc-chips [map]="service?.selector"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-endpoint-card-list [endpoints]="service?.endpointList?.endpoints"
-                       [initialized]="isInitialized"></kd-endpoint-card-list>
+<xc-endpoint-card-list [endpoints]="service?.endpointList?.endpoints"
+                       [initialized]="isInitialized"></xc-endpoint-card-list>
 
-<kd-pod-list [endpoint]="podListEndpoint"></kd-pod-list>
+<xc-pod-list [endpoint]="podListEndpoint"></xc-pod-list>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>

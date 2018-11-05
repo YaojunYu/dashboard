@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,28 +15,28 @@
 
 @import '../../../../variables';
 
-.kd-allocated-resources {
+.xc-allocated-resources {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.kd-graph-container {
+.xc-graph-container {
   flex: auto;
   text-align: center;
 }
 
-.kd-graph-legend {
+.xc-graph-legend {
   padding-bottom: 2 * $baseline-grid;
 }
 
-.kd-graph-legend-title {
+.xc-graph-legend-title {
   font-size: $subhead-font-size-base-lg;
   padding-bottom: $baseline-grid;
   text-align: center;
 }
 
-.kd-graph-legend-entry {
+.xc-graph-legend-entry {
   display: flex;
   margin: 0 auto;
   padding: $baseline-grid;
@@ -43,16 +44,16 @@
   width: 240px;
 }
 
-.kd-graph-legend-placeholder {
+.xc-graph-legend-placeholder {
   width: 2.75 * $baseline-grid;
 }
 
-.kd-graph-legend-value {
+.xc-graph-legend-value {
   flex: 1 auto;
   text-align: right;
 }
 
-.kd-graph-title {
+.xc-graph-title {
   font-size: $subhead-font-size-base;
   padding-bottom: 2 * $baseline-grid;
 }

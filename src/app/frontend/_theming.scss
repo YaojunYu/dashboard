@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +15,7 @@
 
 @import '~@angular/material/theming';
 
-@mixin kd-theme($theme) {
+@mixin xc-theme($theme) {
 
   // Palettes.
 
@@ -63,106 +64,106 @@
 
   // Universal application styles.
 
-  .kd-primary {
+  .xc-primary {
     color: $primary;
   }
 
-  .kd-bg-primary {
+  .xc-bg-primary {
     background-color: $primary;
   }
 
-  .kd-accent {
+  .xc-accent {
     color: $accent;
   }
 
-  .kd-success {
+  .xc-success {
     color: $success;
   }
 
-  .kd-bg-success {
+  .xc-bg-success {
     background-color: $success;
   }
 
-  .kd-warning {
+  .xc-warning {
     color: $warning;
   }
 
-  .kd-bg-warning {
+  .xc-bg-warning {
     background-color: $warning;
   }
 
-  .kd-error {
+  .xc-error {
     color: $error;
   }
 
-  .kd-bg-error {
+  .xc-bg-error {
     background-color: $error;
   }
 
-  .kd-muted {
+  .xc-muted {
     color: $muted;
   }
 
-  .kd-muted-light {
+  .xc-muted-light {
     color: $muted-light;
   }
 
-  .kd-chart-green {
+  .xc-chart-green {
     color: $chart-green;
   }
 
-  .kd-chart-blue {
+  .xc-chart-blue {
     color: $chart-blue;
   }
 
-  .kd-primary-button {
+  .xc-primary-button {
     color: mat-color($primary-palette, 50);
   }
 
-  .kd-bg-background {
+  .xc-bg-background {
     background-color: $background;
   }
 
-  .kd-loading-shade {
+  .xc-loading-shade {
     background: $border;
   }
 
-  .kd-bg-card-dark {
+  .xc-bg-card-dark {
     background-color: $card-background-dark;
   }
 
-  .kd-border {
+  .xc-border {
     border: 1px solid $border;
   }
 
-  .kd-white {
+  .xc-white {
     color: $white;
   }
 
   // Component-level styles
 
-  .kd-notifications-panel {
+  .xc-notifications-panel {
     background-color: $card-background;
     box-shadow: $box-shadow;
   }
 
-  .kd-notification-unread {
+  .xc-notification-unread {
     background-color: darken($background, 2.5%);
   }
 
-  .kd-code-block {
+  .xc-code-block {
     background-color: $border;
   }
 
-  .kd-minimized-card-header:hover {
+  .xc-minimized-card-header:hover {
     background: $border;
   }
 
-  .kd-primary-toolbar {
+  .xc-primary-toolbar {
     background-color: lighten($background, 5%);
   }
 
-  .kd-search {
+  .xc-search {
     background-color: darken($background, 5%);
 
     input {
@@ -170,28 +171,28 @@
     }
   }
 
-  .kd-nav-item-button {
+  .xc-nav-item-button {
     color: mat-color($primary-palette, lighter);
   }
 
-  .kd-nav-item-button-active {
+  .xc-nav-item-button-active {
     background-color: mat-color($background-palette, selected-button);
     color: $primary;
   }
 
-  .kd-search-input {
+  .xc-search-input {
     background: $card-background;
     border-bottom-color: $border;
     color: mat-color($foreground-palette, text);
   }
 
-  .kd-graph-legend-entry {
+  .xc-graph-legend-entry {
     &:not(:last-child) {
       border-bottom: 1px solid $border;
     }
   }
 
-  .kd-namespace-select-input-container {
+  .xc-namespace-select-input-container {
     .mat-form-field-underline {
       background-color: $border;
     }
@@ -206,21 +207,21 @@
     color: $primary !important;
   }
 
-  .kd-namespace-select-input {
+  .xc-namespace-select-input {
     background: $card-background;
     color: mat-color($foreground-palette, text);
   }
 
-  .kd-namespace-select-input-border,
-  .kd-shell-toolbar-select {
+  .xc-namespace-select-input-border,
+  .xc-shell-toolbar-select {
     border-bottom: 1px solid $border !important;
   }
 
-  .kd-cross-line-primary {
+  .xc-cross-line-primary {
     stroke: $primary;
   }
 
-  .kd-cross-outline {
+  .xc-cross-outline {
     stroke: $background;
   }
 
@@ -232,7 +233,7 @@
     background-color: $card-background-dark;
   }
 
-  .kd-user-help {
+  .xc-user-help {
     .material-icons {
       color: $primary;
     }

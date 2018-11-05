@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,5 +21,5 @@ import {Endpoint} from '@api/backendapi';
  * from the outside of the cluster.
  */
 @Component(
-    {selector: 'kd-external-endpoint', templateUrl: './template.html', styleUrls: ['./style.scss']})
+    {selector: 'xc-external-endpoint', templateUrl: './template.html', styleUrls: ['./style.scss']})
 export class ExternalEndpointComponent { @Input() endpoints: Endpoint[]; }

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +17,7 @@ import {Component, Input} from '@angular/core';
 import {ObjectMeta, TypeMeta} from '@api/backendapi';
 
 @Component({
-  selector: 'kd-actionbar-detail-actions',
+  selector: 'xc-actionbar-detail-actions',
   templateUrl: './template.html',
 })
 export class ActionbarDetailActionsComponent {

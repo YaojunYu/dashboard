@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,10 +15,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div class="kd-login-container kd-bg-background"
+<div class="xc-login-container xc-bg-background"
      fxFlex>
-  <kd-card titleClasses="kd-card-top-radius kd-bg-primary kd-accent"
-           class="kd-login-card"
+  <xc-card titleClasses="xc-card-top-radius xc-bg-primary xc-accent"
+           class="xc-login-card"
            [expandable]="false">
     <div title>Kubernetes Dashboard</div>
     <div content>
@@ -34,7 +35,7 @@ limitations under the License.
                 <ng-container *ngSwitchCase="loginModes.Token">Token</ng-container>
               </ng-container>
             </mat-radio-button>
-            <div class="kd-login-mode-description"
+            <div class="xc-login-mode-description"
                  [ngSwitch]="mode">
               <ng-container *ngSwitchCase="loginModes.Kubeconfig">
                 Please select the kubeconfig file that you have created to configure access to the cluster. To find out more about how to configure and use kubeconfig file, please refer to the <a href='https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/'>Configure Access to Multiple Clusters</a> section.
@@ -51,7 +52,7 @@ limitations under the License.
 
         <ng-container [ngSwitch]="selectedAuthenticationMode">
           <mat-form-field *ngSwitchCase="loginModes.Token"
-                          class="kd-login-input">
+                          class="xc-login-input">
             <input matInput
                    id="token"
                    name="token"
@@ -64,7 +65,7 @@ limitations under the License.
           <div *ngSwitchCase="loginModes.Basic"
                fxLayout="column">
             <mat-form-field fxFlex
-                            class="kd-login-input">
+                            class="xc-login-input">
               <input id="username"
                      name="username"
                      matInput
@@ -74,7 +75,7 @@ limitations under the License.
             </mat-form-field>
 
             <mat-form-field fxFlex
-                            class="kd-login-input">
+                            class="xc-login-input">
               <input id="password"
                      name="password"
                      matInput
@@ -86,9 +87,9 @@ limitations under the License.
           </div>
 
           <div *ngSwitchCase="loginModes.Kubeconfig"
-               class="kd-login-input">
-            <kd-upload-file label="Choose kubeconfig file"
-                            (onLoad)="onChange($event)"></kd-upload-file>
+               class="xc-login-input">
+            <xc-upload-file label="Choose kubeconfig file"
+                            (onLoad)="onChange($event)"></xc-upload-file>
           </div>
         </ng-container>
 
@@ -97,18 +98,18 @@ limitations under the License.
           <button mat-raised-button
                   color="primary"
                   type="submit"
-                  class="kd-login-button">
+                  class="xc-login-button">
             Sign in
           </button>
           <button mat-button
                   color="primary"
                   type="button"
-                  class="kd-login-button"
+                  class="xc-login-button"
                   (click)="skip()">
             Skip
           </button>
         </div>
       </form>
     </div>
-  </kd-card>
+  </xc-card>
 </div>

@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,28 +15,32 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="cronJob?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="cronJob?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Cron Job information</div>
 
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="cronJob?.schedule">
-      <span class="kd-muted-light">Schedule:&nbsp;</span>
+      <span class="xc-muted-light">Schedule:&nbsp;</span>
       <span>{{cronJob.schedule}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="cronJob?.active !== null">
-      <span class="kd-muted-light">Active Jobs:&nbsp;</span>
+      <span class="xc-muted-light">Active Jobs:&nbsp;</span>
       <span>{{cronJob.active}}</span>
     </div>
 
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="cronJob?.suspend !== null">
-      <span class="kd-muted-light">Suspend:&nbsp;</span>
+      <span class="xc-muted-light">Suspend:&nbsp;</span>
       <span>{{cronJob.suspend}}</span>
     </div>
   </div>
@@ -43,39 +48,39 @@ limitations under the License.
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="cronJob?.schedule">
+    <xc-property *ngIf="cronJob?.schedule">
       <div key>Schedule</div>
       <div value>{{cronJob.schedule}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="cronJob?.active !== null">
+    <xc-property *ngIf="cronJob?.active !== null">
       <div key>Active Jobs</div>
       <div value>{{cronJob.active}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="cronJob?.suspend !== null">
+    <xc-property *ngIf="cronJob?.suspend !== null">
       <div key>Suspend</div>
       <div value>{{cronJob.suspend}}</div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="cronJob?.lastSchedule">
+    <xc-property *ngIf="cronJob?.lastSchedule">
       <div key>Last schedule</div>
       <div value>{{cronJob.lastSchedule}}</div>
-    </kd-property>
+      </xc-property>
 
-    <kd-property *ngIf="cronJob?.concurrencyPolicy">
-      <div key>Concurrency policy</div>
-      <div value>{{cronJob.concurrencyPolicy}}</div>
-    </kd-property>
+      <xc-property *ngIf="cronJob?.concurrencyPolicy">
+        <div key>Concurrency policy</div>
+        <div value>{{cronJob.concurrencyPolicy}}</div>
+      </xc-property>
 
-    <kd-property *ngIf="cronJob?.startingDeadlineSeconds !== null">
-      <div key>Starting deadline seconds</div>
-      <div value>{{cronJob.startingDeadlineSeconds}}</div>
-    </kd-property>
+      <xc-property *ngIf="cronJob?.startingDeadlineSeconds !== null">
+        <div key>Starting deadline seconds</div>
+        <div value>{{cronJob.startingDeadlineSeconds}}</div>
+      </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-job-list [endpoint]="activeJobsEndpoint"
-             title="Active Jobs"></kd-job-list>
+<xc-job-list [endpoint]="activeJobsEndpoint"
+             title="Active Jobs"></xc-job-list>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>

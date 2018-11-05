@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,22 +15,22 @@
 
 @import '../../../variables';
 
-.kd-breadcrumbs-container {
+.xc-breadcrumbs-container {
   display: flex;
   font-size: $subhead-font-size-base-lg;
   padding: (.25 * $baseline-grid) 0 0 $baseline-grid;
 }
 
-.kd-faded-breadcrumb {
+.xc-faded-breadcrumb {
   color: inherit;
   opacity: .54;
 }
 
-.kd-inline-breadcrumb {
+.xc-inline-breadcrumb {
   display: flex;
 }
 
-.kd-breadcrumb-divider {
+.xc-breadcrumb-divider {
   align-self: center;
   padding: 0 (.5 * $baseline-grid);
 }

@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +15,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<h2 mat-dialog-title>Delete a resource</h2>
-<mat-dialog-content class="kd-dialog-text">
+<h2 mat-dialog-title>
+
+
+
+  Delete a resource</h2>
+<mat-dialog-content class="xc-dialog-text">
   <span>Are you sure you want to delete {{data.displayName}} <i>{{data.objectMeta.name}}</i></span>
   <span *ngIf="data.objectMeta.namespace">
     &nbsp;in namespace <i>{{data.objectMeta.namespace}}</i>
   </span>
   <span>?</span>
-  <div class="kd-equivalent-block kd-muted kd-bg-card-dark"
+  <div class="xc-equivalent-block xc-muted xc-bg-card-dark"
        fxLayoutAlign=" center">
     <mat-icon>info</mat-icon>
     <div>

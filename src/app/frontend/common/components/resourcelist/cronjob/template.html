@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,13 +15,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-card role="table"
+<xc-card role="table"
          [hidden]="isHidden()">
   <div title
        fxLayout="row">Cron Jobs</div>
-  <div description><span class="kd-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
+  <div description><span class="xc-muted-light">Items:&nbsp;</span>{{totalItems}}</div>
   <div actions>
-    <kd-card-list-filter></kd-card-list-filter>
+    <xc-card-list-filter></xc-card-list-filter>
   </div>
 
   <div content
@@ -62,7 +63,7 @@ limitations under the License.
       <ng-container matColumnDef="labels">
         <mat-header-cell *matHeaderCellDef>Labels</mat-header-cell>
         <mat-cell *matCellDef="let cronJob">
-          <kd-chips [map]="cronJob.objectMeta.labels"></kd-chips>
+          <xc-chips [map]="cronJob.objectMeta.labels"></xc-chips>
         </mat-cell>
       </ng-container>
 
@@ -98,8 +99,8 @@ limitations under the License.
                     [matColumnDef]="col.name">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let cj">
-          <kd-dynamic-cell [component]="col.component"
-                           [resource]="cj"></kd-dynamic-cell>
+          <xc-dynamic-cell [component]="col.component"
+                           [resource]="cj"></xc-dynamic-cell>
         </mat-cell>
       </ng-container>
 
@@ -120,6 +121,6 @@ limitations under the License.
 
   <div content
        [hidden]="!showZeroState()">
-    <kd-list-zero-state></kd-list-zero-state>
+    <xc-list-zero-state></xc-list-zero-state>
   </div>
-</kd-card>
+</xc-card>

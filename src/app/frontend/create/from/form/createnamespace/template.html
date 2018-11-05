@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,13 +15,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<h4 mat-dialog-title>Create a new namespace</h4>
-<mat-dialog-content class="kd-dialog-text">
+<h4 mat-dialog-title>
+
+
+
+  Create a new namespace</h4>
+<mat-dialog-content class="xc-dialog-text">
   <ng-container>
     <div>The new namespace will be added to the cluster.</div>
     <div>
       <form [formGroup]="form">
-        <kd-help-section>
+        <xc-help-section>
           <mat-form-field>
             <input matInput
                    type="text"
@@ -42,7 +47,7 @@ limitations under the License.
               Name must be alphanumeric and may contain dashes.
             </mat-error>
           </mat-form-field>
-          <kd-user-help i18n>
+          <xc-user-help i18n>
             A namespace with the specified name will be added to the cluster.
             <a href="http://kubernetes.io/docs/admin/namespaces/"
                target="_blank"
@@ -51,8 +56,8 @@ limitations under the License.
                 Learn more
                 <i class="material-icons">open_in_new</i>
               </a>
-          </kd-user-help>
-        </kd-help-section>
+          </xc-user-help>
+        </xc-help-section>
       </form>
     </div>
   </ng-container>

@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,7 @@ import {NamespacedResourceService} from '../../../services/resource/resource';
 import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
-@Component({selector: 'kd-ingress-list', templateUrl: './template.html'})
+@Component({selector: 'xc-ingress-list', templateUrl: './template.html'})
 export class IngressListComponent extends ResourceListBase<IngressList, Ingress> {
   @Input() endpoint = EndpointManager.resource(Resource.ingress, true).list();
 

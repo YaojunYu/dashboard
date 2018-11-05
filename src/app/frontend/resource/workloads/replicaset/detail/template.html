@@ -1,4 +1,5 @@
 <!--
+Copyright 2018 The XCloud Team.
 Copyright 2017 The Kubernetes Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,16 +15,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<kd-object-meta [initialized]="isInitialized"
-                [objectMeta]="replicaSet?.objectMeta"></kd-object-meta>
+<xc-object-meta [initialized]="isInitialized"
+                [objectMeta]="replicaSet?.objectMeta">
 
-<kd-card [initialized]="isInitialized">
+
+
+</xc-object-meta>
+
+<xc-card [initialized]="isInitialized">
   <div title>Replica Set information</div>
 
   <div description>
-    <div class="kd-inline-property"
+    <div class="xc-inline-property"
          *ngIf="replicaSet?.podInfo">
-      <span class="kd-muted-light">Pods:&nbsp;</span>
+      <span class="xc-muted-light">Pods:&nbsp;</span>
       <span>{{replicaSet.podInfo.running}} / {{replicaSet.podInfo.desired}}</span>
     </div>
   </div>
@@ -31,34 +36,34 @@ limitations under the License.
   <div content
        *ngIf="isInitialized"
        fxLayout="row wrap">
-    <kd-property *ngIf="replicaSet?.selector">
+    <xc-property *ngIf="replicaSet?.selector">
       <div key>Selector</div>
       <div value>
-        <kd-chips [map]="replicaSet.selector.matchLabels"></kd-chips>
+        <xc-chips [map]="replicaSet.selector.matchLabels"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="replicaSet?.containerImages">
+    <xc-property *ngIf="replicaSet?.containerImages">
       <div key>Images</div>
       <div value>
-        <kd-chips [map]="replicaSet.containerImages"></kd-chips>
+        <xc-chips [map]="replicaSet.containerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
 
-    <kd-property *ngIf="replicaSet?.initContainerImages">
+    <xc-property *ngIf="replicaSet?.initContainerImages">
       <div key>Init images</div>
       <div value>
-        <kd-chips [map]="replicaSet.initContainerImages"></kd-chips>
+        <xc-chips [map]="replicaSet.initContainerImages"></xc-chips>
       </div>
-    </kd-property>
+    </xc-property>
   </div>
-</kd-card>
+</xc-card>
 
-<kd-pod-status-card [podInfo]="replicaSet?.podInfo"
-                    [initialized]="isInitialized"></kd-pod-status-card>
+<xc-pod-status-card [podInfo]="replicaSet?.podInfo"
+                    [initialized]="isInitialized"></xc-pod-status-card>
 
-<kd-pod-list [endpoint]="podListEndpoint"></kd-pod-list>
+<xc-pod-list [endpoint]="podListEndpoint"></xc-pod-list>
 
-<kd-service-list [endpoint]="serviceListEndpoint"></kd-service-list>
+<xc-service-list [endpoint]="serviceListEndpoint"></xc-service-list>
 
-<kd-event-list [endpoint]="eventListEndpoint"></kd-event-list>
+<xc-event-list [endpoint]="eventListEndpoint"></xc-event-list>

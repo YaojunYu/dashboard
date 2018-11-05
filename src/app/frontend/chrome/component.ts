@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,22 +13,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StateService} from '@uirouter/core';
 
 import {AssetsService} from '../common/services/global/assets';
-import {NotificationsService} from '../common/services/global/notifications';
+import {NavService} from '../common/services/nav/service';
 import {overviewState} from '../overview/state';
 
 @Component({
-  selector: 'kd-chrome',
+  selector: 'xc-chrome',
   templateUrl: './template.html',
   styleUrls: ['./style.scss'],
 })
-export class ChromeComponent {
+export class ChromeComponent implements OnInit {
   loading = false;
+  sidebarMiniActive = false;
+  navOpen = false;
 
-  constructor(public assets: AssetsService, private readonly state_: StateService) {}
+  constructor(public assets: AssetsService, private readonly navService: NavService) {}
 
   getOverviewStateName(): string {
     return overviewState.name;
@@ -38,14 +41,22 @@ export class ChromeComponent {
   }
 
   getSystemBannerClass(): string {
-    return 'kd-bg-warning';
+    return 'xc-bg-warning';
   }
 
   getSystemBannerMessage(): string {
     return `<b>System is going to be shut down in 5 min...</b>`;
   }
 
-  goToCreateState(): void {
-    this.state_.go('create');
+  switchMini(): void {
+    this.sidebarMiniActive = !this.sidebarMiniActive;
+  }
+
+  open(): void {
+    this.navOpen = !this.navOpen;
+  }
+
+  ngOnInit(): void {
+    this.navService.setSwitcher(this);
   }
 }

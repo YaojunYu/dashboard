@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +23,7 @@ export interface AlertDialogConfig {
 }
 
 @Component({
-  selector: 'kd-alert-dialog',
+  selector: 'xc-alert-dialog',
   templateUrl: 'template.html',
 })
 export class AlertDialog {

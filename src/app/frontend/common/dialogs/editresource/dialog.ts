@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ enum EditorMode {
 }
 
 @Component({
-  selector: 'kd-delete-resource-dialog',
+  selector: 'xc-delete-resource-dialog',
   templateUrl: 'template.html',
 })
 export class EditResourceDialog implements OnInit {

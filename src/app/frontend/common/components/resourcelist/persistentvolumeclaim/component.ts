@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +29,7 @@ import {MenuComponent} from '../../list/column/menu/component';
 import {ListGroupIdentifiers, ListIdentifiers} from '../groupids';
 
 @Component({
-  selector: 'kd-persistent-volume-claim-list',
+  selector: 'xc-persistent-volume-claim-list',
   templateUrl: './template.html',
 })
 export class PersistentVolumeClaimListComponent extends
@@ -44,9 +45,9 @@ export class PersistentVolumeClaimListComponent extends
     this.groupId = ListGroupIdentifiers.config;
 
     // Register status icon handlers
-    this.registerBinding(this.icon.checkCircle, 'kd-success', this.isInBoundState);
-    this.registerBinding(this.icon.timelapse, 'kd-muted', this.isInPendingState);
-    this.registerBinding(this.icon.error, 'kd-error', this.isInLostState);
+    this.registerBinding(this.icon.checkCircle, 'xc-success', this.isInBoundState);
+    this.registerBinding(this.icon.timelapse, 'xc-muted', this.isInPendingState);
+    this.registerBinding(this.icon.error, 'xc-error', this.isInLostState);
 
     // Register action columns.
     this.registerActionColumn<MenuComponent>('menu', MenuComponent);

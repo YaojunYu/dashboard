@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'kd-hidden-property',
+  selector: 'xc-hidden-property',
   templateUrl: './template.html',
   styleUrls: ['./style.scss'],
 })

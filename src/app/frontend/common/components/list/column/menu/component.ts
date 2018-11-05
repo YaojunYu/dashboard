@@ -1,3 +1,4 @@
+// Copyright 2018 The XCloud Team.
 // Copyright 2017 The Kubernetes Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +21,7 @@ import {Subscription} from 'rxjs/Subscription';
 import {VerberService} from '../../../../services/global/verber';
 
 @Component({
-  selector: 'kd-resource-context-menu',
+  selector: 'xc-resource-context-menu',
   templateUrl: './template.html',
 })
 export class MenuComponent implements ActionColumn, OnDestroy {
